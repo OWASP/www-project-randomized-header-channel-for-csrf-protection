@@ -53,3 +53,24 @@ RHC is designed with the following principles:
 - Flores Alvarado, F. *Randomized Header Channel: A Practical Approach to CSRF Mitigation*. Medium, 2025.
 - OWASP Foundation. [CSRF Prevention Cheat Sheet](https://owasp.org/www-project-cheat-sheets/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
 - PoC repository: [OWASP RHC GitHub](https://github.com/OWASP/www-project-randomized-header-channel-for-csrf-protection)
+
+
+---
+
+## Mini-diagram of RHC Flow
+
++-------------------+       +-------------------+       +-------------------+
+|   Client          |       |   Server          |       |  JWT / CSRF Token |
++-------------------+       +-------------------+       +-------------------+
+         |                            |                          |
+         |--- Generates token ------->|                          |
+         |                            |                          |
+         |--- Selects header  --------|                          |
+         |     X-Server-Certified     |                          |
+         |     X-Server-Sig           |                          |
+         |     X-Server-Flag          |                          |
+         |                            |                          |
+         |--- Sends fetch  ---------->| Verifies header & token  |
+         |                            |                          |
+         |<---  Response OK  ---------|                          |
+

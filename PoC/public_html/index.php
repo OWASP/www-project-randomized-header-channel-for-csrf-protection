@@ -10,7 +10,11 @@
 	<title>Técnica de Dispersión de Encabezados - Ejemplo</title>
 	<style>
 		body { font-family: Arial, sans-serif; margin: 40px; background-color: #f9fafb; color: #333; }
-		h1 { color: #0066cc; }
+		.container { max-width: 800px; margin: 0 auto; text-align: center; }
+		h1 { color: #0066cc; margin-bottom: 0px; }
+		.testmessage1 { font-weight: bold; color: #333; }
+		.testmessage2 { font-weight: bold; background-color: #00ff15; color: #fff; padding: 4px 8px; border-radius: 4px; }
+		.testmessage1, .testmessage2 { display: inline;	}
 		select, input, button { padding: 8px; margin: 5px; }
 		table { border-collapse: collapse; width: 60%; margin-top: 20px; }
 		th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
@@ -22,10 +26,13 @@
 	</style>
 </head>
 <body>
+	<div class="container">
+		<h1>Técnica de Dispersión de Encabezados</h1>
+		<p class="testmessage1">PoC cargado correctamente </p>
+		<p class="testmessage2">✔</p>
 
-	<h1>Técnica de Dispersión de Encabezados</h1>
-	<p>Selecciona un producto y realiza peticiones hacia el Servidor por medio de la API. Se mostrará qué encabezado fue utilizado y cuál recibió el servidor.</p>
-
+		<p>Selecciona un producto y realiza peticiones hacia el Servidor por medio de la API. Se mostrará qué encabezado fue utilizado y cuál recibió el servidor.</p>
+	</div>
 	<form id="productForm">
 		<label>Producto:</label>
 		<select id="productSelect">
@@ -49,12 +56,13 @@
 		<button type="button" onclick="solicitudFetch()">Petición Fetch</button>
 	</form>
 
-	<table id="headersTable">
-		<tr><th>Encabezado</th><th>Estado</th></tr>
-	</table>
+	<div class="container">
+		<table id="headersTable">
+			<tr><th>Encabezado</th><th>Estado</th></tr>
+		</table>
 
-	<div id="result">Esperando acción...</div>
-
+		<div id="result">Esperando acción...</div>
+	</div>
 <script>
 	// ===============================
 	// CONFIGURACIÓN Y CONSTANTES
