@@ -14,7 +14,7 @@
     Explicación técnica:
     - Los navegadores envían el encabezado 'Origin' solo cuando la solicitud
         proviene de un contexto web (por ejemplo, desde un frontend servido por
-        http://localhost o https://midominio.test).
+        http://localhost o https://localhost).
     - Si se hace una petición directa al archivo PHP desde localhost o herramientas
         como Postman, no se incluye el encabezado Origin y la verificación de CORS
         fallaría.
@@ -38,7 +38,7 @@
 /*
 	// --- CORS ---
 	error_log("=== INICIO DE CORS ===");
-	$Allowed_Origins_Cors = ["https://www.midominio.test"];
+	$Allowed_Origins_Cors = ["http://localhost","https://localhost"];
 	if (isset($_SERVER['HTTP_ORIGIN']) && in_array($_SERVER['HTTP_ORIGIN'], $Allowed_Origins_Cors)) {
         if ($_SERVER['REQUEST_METHOD'] !== 'OPTIONS') {
 			error_log("=== CORS - petición o solicitud de origen (HTTP_ORIGIN) permitida. ===");

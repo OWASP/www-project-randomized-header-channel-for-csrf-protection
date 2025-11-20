@@ -9,60 +9,64 @@
 	<meta charset="UTF-8">
 	<title>Técnica de Dispersión de Encabezados - Ejemplo</title>
 	<style>
-		body { font-family: Arial, sans-serif; margin: 40px; background-color: #f9fafb; color: #333; }
+		body { font-family: Arial, sans-serif; margin: 15px; background-color: #f9fafb; color: #333; }
 		.container { max-width: 800px; margin: 0 auto; text-align: center; }
 		h1 { color: #0066cc; margin-bottom: 0px; }
 		.testmessage1 { font-weight: bold; color: #333; }
 		.testmessage2 { font-weight: bold; background-color: #00ff15; color: #fff; padding: 4px 8px; border-radius: 4px; }
 		.testmessage1, .testmessage2 { display: inline;	}
+		.form-section { text-align: left; display: list-item;	margin-top: 20px; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); }
 		select, input, button { padding: 8px; margin: 5px; }
 		table { border-collapse: collapse; width: 60%; margin-top: 20px; }
 		th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
 		th { background-color: #0066cc; color: white; }
 		.green { background-color: #c6f6c6; }
 		.gray { background-color: #f0f0f0; }
-		#errorMsg { color: #b00020; font-weight: bold; margin-top: 10px; display: none; }
-		#result { margin-top: 20px; padding: 10px; border-radius: 5px; background: #eef; }
+		#errorMsg { color: #b00020; font-weight: bold; margin-top: 10px; min-height: 22px; visibility: hidden; }
+		#result { margin-top: 20px; padding: 10px; border-radius: 5px; background: #eef; text-align: left; }
 	</style>
 </head>
 <body>
+
 	<div class="container">
 		<h1>Técnica de Dispersión de Encabezados</h1>
 		<p class="testmessage1">PoC cargado correctamente </p>
 		<p class="testmessage2">✔</p>
 
 		<p>Selecciona un producto y realiza peticiones hacia el Servidor por medio de la API. Se mostrará qué encabezado fue utilizado y cuál recibió el servidor.</p>
+
+		<div class="form-section">
+			<form id="productForm">
+				<label>Producto:</label>
+				<select id="productSelect">
+					<option value="1">Producto 1</option>
+					<option value="2">Producto 2</option>
+					<option value="3">Producto 3</option>
+				</select><br>
+
+				<label>Clave:</label>
+				<input type="text" id="productKey" placeholder="Ej. P001"><br>
+
+				<label>Descripción:</label>
+				<input type="text" id="productDesc" placeholder="Ej. Botella de vino tinto"><br>
+
+				<label>Precio:</label>
+				<input type="number" id="productPrice" placeholder="Ej. 250.00"><br>
+
+				<div id="errorMsg"></div>
+
+				<button type="button" onclick="solicitudAJAX()">Petición AJAX</button>
+				<button type="button" onclick="solicitudFetch()">Petición Fetch</button>
+			</form>
+
+			<table id="headersTable">
+				<tr><th>Encabezado</th><th>Estado</th></tr>
+			</table>
+
+			<div id="result">Esperando acción...</div>
+		</div>
 	</div>
-	<form id="productForm">
-		<label>Producto:</label>
-		<select id="productSelect">
-			<option value="1">Producto 1</option>
-			<option value="2">Producto 2</option>
-			<option value="3">Producto 3</option>
-		</select><br>
 
-		<label>Clave:</label>
-		<input type="text" id="productKey" placeholder="Ej. P001"><br>
-
-		<label>Descripción:</label>
-		<input type="text" id="productDesc" placeholder="Ej. Botella de vino tinto"><br>
-
-		<label>Precio:</label>
-		<input type="number" id="productPrice" placeholder="Ej. 250.00"><br>
-
-		<div id="errorMsg"></div>
-
-		<button type="button" onclick="solicitudAJAX()">Petición AJAX</button>
-		<button type="button" onclick="solicitudFetch()">Petición Fetch</button>
-	</form>
-
-	<div class="container">
-		<table id="headersTable">
-			<tr><th>Encabezado</th><th>Estado</th></tr>
-		</table>
-
-		<div id="result">Esperando acción...</div>
-	</div>
 <script>
 	// ===============================
 	// CONFIGURACIÓN Y CONSTANTES
@@ -106,13 +110,13 @@
 
 	function mostrarError(mensaje) {
 		const errorDiv = document.getElementById('errorMsg');
-		errorDiv.style.display = "block";
+		errorDiv.style.visibility = "visible";
 		errorDiv.textContent = mensaje;
 	}
 
 	function limpiarError() {
 		const errorDiv = document.getElementById('errorMsg');
-		errorDiv.style.display = "none";
+		errorDiv.style.visibility = "hidden";
 		errorDiv.textContent = "";
 	}
 
