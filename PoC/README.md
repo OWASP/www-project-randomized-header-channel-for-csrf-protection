@@ -9,8 +9,17 @@
 
 ## Instrucciones de ejecución (Laragon / XAMPP)
 1. Copia la carpeta `PoC/` dentro de tu `www` o `htdocs`.
-2. Asegúrate de que la ruta de `apiURL` en `public_html/index.php` apunte a la ruta correcta de tu API (por ejemplo: `http://localhost/PoC/api/`).
+
+2. Asegúrate de que la ruta de `apiURL` en `public_html/index.php` apunte a la ruta correcta de tu API
+    - por ejemplo: 
+        1.- (`http://localhost/www-project-randomized-header-channel-for-csrf-protection/PoC/api/`)
+        2.- (`https://localhost/www-project-randomized-header-channel-for-csrf-protection/PoC/api/`)
+
 3. Abre `public_html/index.php` desde el navegador.
+    - por ejemplo: 
+        1.- (`http://localhost/www-project-randomized-header-channel-for-csrf-protection/PoC/public_html/`)
+        2.- (`https://localhost/www-project-randomized-header-channel-for-csrf-protection/PoC/public_html/`)
+
 4. Prueba las peticiones con "Petición Fetch" o "Petición AJAX".
 
 
