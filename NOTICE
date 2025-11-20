@@ -1,0 +1,17 @@
+Created by Fernando Flores Alvarado
+Original author of the "Randomized Header Channel" concept.
+Published entries on Medium:
+- Advanced CSRF Mitigation Strategy — Randomized Header Channel using Pattern Dispersion
+https://medium.com/@fernandofa0306/advanced-csrf-mitigation-strategy-randomized-header-channel-using-pattern-dispersion-20d54b1d4c6e
+- Controlled Chaos — Multi-layered CSRF Defense using Dynamic Header Dispersion
+https://medium.com/@fernandofa0306/controlled-chaos-multi-layered-csrf-defense-using-dynamic-header-dispersion-a14926288207
+
+
+This project includes documentation licensed under CC BY-SA 4.0 (OWASP site policy).
+Code and PoC implementation are licensed under Apache License 2.0.
+
+
+Contact: fernandofa0306@gmail.com
+
+
+(C) 2025 Fernando Flores Alvarado
