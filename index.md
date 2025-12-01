@@ -17,6 +17,10 @@ I hope this can be a valuable contribution to the OWASP community, especially in
 
 ### Road Map
 1.- Submit idea for review.
+
 2.- Collect feedback from OWASP community.
+
 3.- Adjust documentation if needed and add implementation examples.
+
 4.- Publish and maintain the project as open security documentation.
+
