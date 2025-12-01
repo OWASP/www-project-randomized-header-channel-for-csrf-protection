@@ -1,3 +1,41 @@
+# ==========================
+# RHC_Protocol_Core - .gitignore
+# ==========================
+
+# Archivos temporales del sistema
+.DS_Store
+Thumbs.db
+*.log
+
+# Archivos de entorno
+.env
+*.env
+
+# Dependencias y builds
+node_modules/
+dist/
+build/
+venv/
+__pycache__/
+tmp/
+cache/
+
+# Configuraciones del editor
+.vscode/
+.idea/
+
+# Archivos de respaldo o temporales
+*.bak
+*.tmp
+*.swp
+
+# Archivos específicos de Laragon / entorno local
+*.ini
+*.conf
+*.bak
+logs/
+
+# Otros Archivos
 /Gemfile
 /Gemfile.lock
 /favicon.ico

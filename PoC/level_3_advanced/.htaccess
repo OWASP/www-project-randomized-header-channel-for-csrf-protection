@@ -1,0 +1,28 @@
+# ==========================================================
+#  HTACCESS — RHC Protocol Core
+#  ----------------------------------------------------------
+#  Implementación del Protocolo RHC (Randomized Header Channel)
+#  Protección mínima aplicada al entorno del nivel avanzado.
+#
+#  Este archivo evita la exposición directa de los listados
+#  de archivos y directorios internos de la API.
+#
+#  @file        /.htaccess
+#
+#  @project     RHC Protocol Core
+#  @implementation Nivel 3 — Avanzado
+#  @purpose     Evitar exposición directa de listados de archivos
+#               y directorios internos en entorno de demostración.
+#
+#  @author      Fernando Flores Alvarado
+#  @license     Apache 2.0 (código) + CC BY 4.0 (documentación)
+#  @version     1.0.0
+#  @codename    Origin Entropy
+#  @date        Noviembre 2025
+# ==========================================================
+
+
+# --------------------------------------------
+# 1. Desactivar listado de directorios
+# --------------------------------------------
+Options -Indexes

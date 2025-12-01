@@ -1,0 +1,70 @@
+@charset "UTF-8"; /* Definimos la codificación de caracteres para el archivo CSS. */
+
+/* ==========================================================
+*  STYLE SHEET — RHC Protocol Core
+*  ----------------------------------------------------------
+*  Estilos base para la interfaz de usuario de la PoC del
+*  protocolo RHC (Randomized Header Channel) — Nivel 1.
+* 
+*  @file        public_html/css/style.css
+* 
+*  @project     RHC Protocol Core
+*  @implementation Nivel 1 — Básico
+*  @purpose     Proporcionar una capa visual limpia y mínima
+*               para las pruebas del cliente.
+* 
+*  @author      Fernando Flores Alvarado
+*  @license     Apache 2.0 (code) + CC BY 4.0 (documentation)
+*  @version     1.0.0
+*  @codename    Origin Entropy
+*  @date        Noviembre 2025
+* ========================================================== */
+
+	body { font-family: Arial, sans-serif; margin: 15px; background-color: #f9fafb; color: #333; }
+	.container { max-width: 800px; margin: 0 auto; text-align: center; }
+	h1 { color: #0066cc; margin-bottom: 5px; }
+	h2 { color: #444; font-weight: normal; margin-top: 0; margin-bottom: 15px; }
+	.testmessage1 { font-weight: bold; color: #333; }
+	.testmessage2 { font-weight: bold; background-color: #00ff15; color: #fff; padding: 4px 8px; border-radius: 4px; }
+	.testmessage1, .testmessage2 { display: inline;	}
+	.info-box { display: flex; align-items: flex-start; background-color: #e8f4ff; border-left: 5px solid #0066cc; padding: 12px 15px; margin: 20px 0; text-align: left; border-radius: 6px; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05); }
+	.info-box .icon { font-size: 20px; margin-right: 10px; color: #0066cc; line-height: 1.4; }
+	.info-box p { margin: 0; font-size: 14px; color: #333; }
+	.form-section { text-align: left; display: list-item;	margin-top: 20px; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); }
+	.button-group { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 15px;}
+	select, input { padding: 8px; margin: 5px; }
+	button { padding: 8px 12px; border: none; border-radius: 4px; cursor: pointer; border: 2px solid white;
+		box-shadow: 0 0 6px rgba(255, 255, 255, 1); transition: background-color 0.2s ease; }
+	button:active { background-color: #0066cc; border: 2px solid white;
+		box-shadow: 0 0 6px rgba(254, 3, 3, 0.6); color: white; transition: background-color 0.2s ease; }
+	button:focus { outline: none; box-shadow: 0 0 8px rgba(255, 255, 255, 0.9); border: 2px solid white; }
+	button.presionado { background-color: #0066cc !important; border: 2px solid white; box-shadow: 0 0 6px rgba(254, 3, 3, 0.6);
+		color: white; transition: background-color 0.2s ease; }
+	table { border-collapse: collapse; width: 40%; margin-top: 20px; }
+	th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
+	th { background-color: #0066cc; color: white; }
+	.green { background-color: #c6f6c6; }
+	.red { background-color: #f6c6c6; }
+	.gray { background-color: #f0f0f0; }
+	/* Contenedor de ambas tablas */
+	.tables-wrapper { display: flex; justify-content: center; align-items: flex-start; gap: 30px; flex-wrap: wrap; margin-top: 20px; }
+	/* Cada tabla dentro de su caja */
+	.table-box { flex: 1 1 300px; max-width: 350px; text-align: center; }
+	/* Título de cada tabla */
+	.table-box h3 { margin-bottom: 10px; color: #0066cc; font-weight: bold; }
+	/* Estilos de tabla coherentes con el diseño base */
+	.table-box table { border-collapse: collapse; width: 100%; }
+	.table-box th, .table-box td { border: 1px solid #ddd; padding: 8px; text-align: center; }
+	.table-box th { background-color: #0066cc; color: white; }
+	/* Alinear a la izquierda solo la primera columna de la tabla de Tokens */
+	#tokensTable td:first-child { text-align: left; }
+	.table-box .green { background-color: #c6f6c6; }
+	.table-box .gray { background-color: #f0f0f0; }
+	/* Ajuste responsive adicional */
+	@media (max-width: 800px) {
+		.tables-wrapper { flex-direction: column; align-items: center; }
+		.table-box { max-width: 100%; }
+	}
+	#errorMsg { color: #b00020; font-weight: bold; margin-top: 10px; min-height: 22px; visibility: hidden; }
+	#result { margin-top: 20px; padding: 10px; border-radius: 5px; background: #eef; text-align: left; }
+	.hidden { display: none; }

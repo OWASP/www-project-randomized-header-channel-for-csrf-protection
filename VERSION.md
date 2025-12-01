@@ -1,0 +1,7 @@
+# Version Information
+
+**Version:** 1.0.0  
+**Date:** 2025-11-02  
+**Codename:** Entropy Origin  
+**Description:** Punto cero: el núcleo del protocolo antes de su expansión, principio físico del desorden controlado.  
+**Status:** Initial repository structure and documentation phase  

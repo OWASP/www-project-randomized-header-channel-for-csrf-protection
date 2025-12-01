@@ -1,0 +1,95 @@
+@charset "UTF-8"; /* Definimos la codificación de caracteres para el archivo CSS. */
+
+/* ==========================================================
+*  STYLE SHEET — RHC Protocol Core
+*  ----------------------------------------------------------
+*  Estilos base para la interfaz gráfica principal del “Entropy Lab”
+*   del Protocolo RHC (Randomized Header Channel) — Nivel 4.
+* 
+*  @file        public_html/entropy/css/style.css
+* 
+*  @project     RHC Protocol Core
+*  @implementation Nivel 4 — Adaptativo Dinámico
+* 
+*  @author      Fernando Flores Alvarado
+*  @license     Apache 2.0 (code) + CC BY 4.0 (documentation)
+*  @version     1.0.0
+*  @codename    Origin Entropy
+*  @date        Noviembre 2025
+* ========================================================== */
+
+	body {
+		font-family: "Segoe UI", sans-serif;
+		background: #0d1117;
+		color: #f0f0f0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 10px;
+	}
+	h2 {
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+	p {
+		margin-bottom: 0px;
+	}
+	textarea {
+		width: 90%;
+		height: 90px;
+		background: #161b22;
+		color: #f0f0f0;
+		border: 1px solid #30363d;
+		border-radius: 8px;
+		padding: 10px;
+		font-size: 15px;
+		resize: none;
+	}
+	textarea.error {
+		border: 4px solid #ff6b6b;
+	}
+	button {
+		margin-top: 12px;
+		padding: 10px 20px;
+		font-size: 16px;
+		border: none;
+		background: #238636;
+		color: white;
+		border-radius: 6px;
+		cursor: pointer;
+		transition: 0.2s;
+	}
+	button:hover {
+		background: #2ea043;
+	}
+	canvas {
+		max-width: 800px;
+		margin-top: 10px;
+	}
+	.legend {
+		margin-top: 20px;
+		display: flex;
+		gap: 10px;
+		font-size: 14px;
+		color: #aaa;
+	}
+	.legend div {
+		display: flex;
+		align-items: center;
+		gap: 4px;
+	}
+	.legend span {
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		border-radius: 3px;
+	}
+	#msgBox {
+		margin-top: 0;
+		color: #ff6b6b;
+		font-size: 25px;
+		min-height: 18px;
+	}
+	.hidden {
+		display: none;
+	}

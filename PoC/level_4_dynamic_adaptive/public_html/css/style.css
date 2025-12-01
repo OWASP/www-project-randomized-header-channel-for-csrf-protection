@@ -1,0 +1,129 @@
+@charset "UTF-8"; /* Definimos la codificación de caracteres para el archivo CSS. */
+
+/* ==========================================================
+*  STYLE SHEET — RHC Protocol Core
+*  ----------------------------------------------------------
+*  Estilos base para la interfaz de usuario para este PoC del
+*  protocolo RHC (Randomized Header Channel) — Nivel 4.
+* 
+*  @file        public_html/css/style.css
+* 
+*  @project     RHC Protocol Core
+*  @implementation Nivel 4 — Adaptativo Dinámico
+* 
+*  @author      Fernando Flores Alvarado
+*  @license     Apache 2.0 (code) + CC BY 4.0 (documentation)
+*  @version     1.0.0
+*  @codename    Origin Entropy
+*  @date        Noviembre 2025
+* ========================================================== */
+
+	body { font-family: Arial, sans-serif; margin: 15px; background-color: #f9fafb; color: #333; }
+	.container { max-width: 800px; margin: 0 auto; text-align: center; }
+	h1 { color: #0066cc; margin-bottom: 5px; }
+	h2 { color: #444; font-weight: normal; margin-top: 0; margin-bottom: 15px; }
+	.testmessage1 { font-weight: bold; color: #333; }
+	.testmessage2 { font-weight: bold; background-color: #00ff15; color: #fff; padding: 4px 8px; border-radius: 4px; }
+	.testmessage1, .testmessage2 { display: inline; }
+	.info-box { display: flex; align-items: flex-start; background-color: #e8f4ff; border-left: 5px solid #0066cc; padding: 12px 15px; margin: 20px 0; text-align: left; border-radius: 6px; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05); }
+	.info-box .icon { font-size: 20px; margin-right: 10px; color: #0066cc; line-height: 1.4; }
+	.info-box p { margin: 0; font-size: 14px; color: #333; }
+	.productTitle, .tableTitle { margin-top: 0px !important; }
+	.productData { text-align: left; }
+	.form-section { text-align: left; display: list-item; margin-top: 0px; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); }
+	.token-section { display: flex; flex-direction: column; align-items: center; margin-top: 15px; gap: 0px; }
+	.button-group { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 15px; }
+	select, input { padding: 8px; margin: 5px; }
+	/* Evita efectos si el botón está deshabilitado */
+	button:disabled, button[disabled], button:disabled.presionado { cursor: not-allowed; }
+	/* mUESTRA efectos si el botón está habilitado */
+	button { padding: 8px 12px; border: none; border-radius: 4px; cursor: pointer; border: 2px solid white;
+		box-shadow: 0 0 6px rgba(255, 255, 255, 1); transition: background-color 0.2s ease; }
+	button:not(:disabled):active { background-color: #0066cc; border: 2px solid white;
+		box-shadow: 0 0 6px rgba(254, 3, 3, 0.6); color: white; transition: background-color 0.2s ease; }
+	button:focus { outline: none; box-shadow: 0 0 8px rgba(255, 255, 255, 0.9); border: 2px solid white; }
+	button:not(:disabled).presionado { background-color: #0066cc !important; border: 2px solid white; box-shadow: 0 0 6px rgba(254, 3, 3, 0.6);
+		color: white; transition: background-color 0.2s ease; }
+	table { border-collapse: collapse; width: 40%; margin-top: 20px; }
+	th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
+	th { background-color: #0066cc; color: white; }
+	.green { background-color: #c6f6c6; }
+	.red { background-color: #f6c6c6; }
+	.gray { background-color: #f0f0f0; }
+	/* Contenedor de ambas tablas */
+	.tables-wrapper { display: flex; flex-wrap: wrap; gap: 20px; width: 100%; justify-content: center; align-items: stretch; margin-top: 0px; }
+	/* Cada tabla dentro de su caja */
+	.table-box { flex: 1 1 clamp(260px, 45%, 600px); text-align: center; }
+	/* Título de cada tabla */
+	.table-box h3 { margin-bottom: 10px; color: #0066cc; font-weight: bold; }
+	/* Estilos de tabla coherentes con el diseño base */
+	.table-box table { width: 100%; border-collapse: collapse; }
+	.table-box th, .table-box td { border: 1px solid #ddd; padding: 8px; text-align: center; }
+	.table-box th { background-color: #0066cc; color: white; }
+	/* Alinear a la izquierda solo la primera columna de la tabla de Tokens */
+	#tokensTable td:first-child { text-align: left; }
+	/* Alinear a la izquierda solo la segunda columna de la tabla del Pool (headers y tokens) */
+	#headerstokensTable td:nth-child(2) { text-align: left; }
+	.table-box .green { background-color: #c6f6c6; }
+	.table-box .gray { background-color: #f0f0f0; }
+	#errorProductosMsg, #errorServidorMsg { color: #b00020; font-weight: bold; margin-top: 10px; min-height: 22px; visibility: hidden; }
+	.errorServidorRequest { color: #b00020; font-weight: bold; margin-top: 10px; min-height: 22px; visibility: hidden;  text-align: left; }
+	#esperaAcción { margin-top: 20px; padding: 10px; border-radius: 5px; background: #eef; text-align: left; }
+	/* ===== Leyenda de colores ===== */
+	.legend { display: flex; justify-content: center; align-items: center; gap: 20px; font-size: 14px; margin-bottom: 10px; color: #333; }
+	.legend-circle { display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+	/* Círculos de colores */
+	.green-circle { background-color: #3cc13b; box-shadow: 0 0 4px rgba(60, 193, 59, 0.6); }
+	.red-circle { background-color: #c13b3b; box-shadow: 0 0 4px rgba(193, 59, 59, 0.6); }
+	.gray-circle { background-color: #bfbfbf; box-shadow: 0 0 3px rgba(0, 0, 0, 0.1); }
+	.tabla-historial { width: 100%; border-collapse: collapse; margin-top: 12px; }
+	.tabla-historial th { background-color: #0066cc; color: white; padding: 8px; font-weight: bold; text-align: left; text-align: center; }
+	.tabla-historial td { padding: 6px 8px; border-bottom: 1px solid #ddd; }
+	.titulo-historial { margin-top: 20px; color: #0066cc; font-size: 18px; font-weight: bold; text-align: center; margin-bottom: 0px; margin-top: 0px; }
+	.historial-fecha {width: 250px; font-weight: bold; color: #444; }
+	.historial-desc { color: #333; }
+	.historial-num, .historial-fecha, .historial-desc, .celda-toggle {cursor: pointer; }
+	/*********** TABLA DE DATOS ***********************/
+	/* Contenedor de la sección de datos colapsable */
+	.datos-expandibles { overflow: hidden; max-height: 0; transition: max-height 0.35s ease-in-out; background: #f0f0f0; border-left: 2px solid #c9d6e2; border-right: 2px solid #c9d6e2; border-bottom: 2px solid #c9d6e2; }
+	/* Celda del icono (triangulito) */
+	.celda-toggle { width: 40px; text-align: center; font-size: 18px; user-select: none; }
+	table { border: 2px solid #333 !important; border-collapse: collapse !important; }
+	table td, table th { border: 1px solid #444 !important; padding: 6px 8px; }
+	/* History row colors */
+	.history-row.green td { background-color: #e6f6e8; border: 3px solid #82a682 !important; }
+	.history-row.red td { background-color: #fde8e8; border: 3px solid #a68282 !important;}
+	/* Estilo para el icono de abrir Entropy Viewer */
+	.openEntropy, .slideEntropyTable, .openEntropyTable { font-size: 20px; cursor: pointer; vertical-align: middle; transition: transform 0.2s ease; line-height: 1; }
+	.openEntropy:hover, .slideEntropyTable:hover, .openEntropyTable:hover { transform: scale(1.2); }	
+	/*******************************************************
+	ANIMACIÓN (slide) HORIZONTAL (DATOS ↔ GRÁFICA)
+	*******************************************************/
+	/* Contenedor general para que ambas pantallas se superpongan */
+	.pantalla-contenedor { position: relative; width: 100%; height: 450px; overflow: hidden; }
+	/* PANTALLA 1 (DATOS) */
+	.pantalla-datos { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #f0f0f0; z-index: 1; transition: transform 0.5s ease-in-out; }
+	/* Cuando la gráfica está activa, OCULTAR DATOS movemos los datos */
+	.pantalla-datos.oculta { transform: translateX(-100%); }
+	/* PANTALLA 2 (GRÁFICA) */
+	.pantalla-grafica { position: absolute; top: 0; left: 100%; width: 100%; height: 100%; background: rgb(143, 138, 138); transition: transform 0.5s ease-in-out; z-index: 2; }
+	/* Cuando está activa */
+	.pantalla-grafica.active { transform: translateX(-100%); }
+	/*******************************************************
+	ANIMACIÓN (slide + fade) HORIZONTAL (DATOS ↔ GRÁFICA)
+	*******************************************************/
+	/* CONTENEDOR PADRE */
+	.pantalla-contenedor { position: relative; width: 100%; height: 450px; overflow: hidden; }
+	/* PANTALLA 1 - DATOS */
+	.pantalla-datos { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #f0f0f0; z-index: 1; transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; }
+	/* PANTALLA 2 - GRAFICA */
+	.pantalla-grafica { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgb(0, 0, 0); transform: translateX(100%); opacity: 0; pointer-events: none; transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; z-index: 2; }
+	/* AL ACTIVAR LA GRAFICA */
+	.pantalla-grafica.active { transform: translateX(0); opacity: 1; pointer-events: all; }
+	/* AL ACTIVAR LA GRAFICA, LA PANTALLA DE DATOS SE VA A LA IZQUIERDA */
+	.pantalla-datos.hide { transform: translateX(-100%); opacity: 0; }
+	.grafica-generada { width: 100%; height: auto; border-radius: 8px; display: block; }
+	/* Añadimos un efecto inicial opcional */
+	.jump { display: inline-block; transform: translateY(0); transition: transform 0.2s ease; }
+	.pantalla-grafica { display: flex; flex-direction: column; }
+	.pantalla-grafica .verDatos { align-self: flex-start; margin-top: 10px; margin-bottom: 10px; margin-left: 10px; }
