@@ -1,5 +1,5 @@
 ---
-title: Architecture & Examples
+title: Architecture and Examples
 layout: null
 tab: true
 order: 1
