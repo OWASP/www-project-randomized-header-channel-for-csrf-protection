@@ -3,7 +3,7 @@ title: Example
 layout: null
 tab: true
 order: 1
-tags: architecture diagrams examples
+tags: example-tag
 ---
 
 # Architecture & Examples
@@ -207,4 +207,5 @@ Pruebas de:
 - canales paralelos
 
 ---
+
 
