@@ -2,25 +2,41 @@
 
 layout: col-sidebar
 title: OWASP Randomized Header Channel for CSRF Protection
-tags: example-tag
+tags: csrf security headers token-based-authentication distributed-systems
 level: 2
 type: documentation
-pitch: A very brief, one-line description of your project
+pitch: A security technique that introduces randomized header channels to strengthen CSRF protection in modern architectures.
 
 ---
 
-This project proposes a security technique titled “Randomized Header Channel for CSRF Protection”. It introduces unpredictability in CSRF token transmission by rotating between multiple valid headers per request, making attacks like interception, automation, or replay significantly harder.
+The **Randomized Header Channel (RHC)** is a security technique designed to increase the integrity and unpredictability of token transmission in web applications. The method proposes rotating multiple valid request headers for token delivery on each request, making it significantly harder for attackers to perform interception, automation, replay, or predictive token-placement attacks.
 
-The idea was originally developed in Spanish and translated into English for community review. The method was designed during the development of a real-world SaaS platform and has practical application in JWT-based systems and modern distributed architectures.
 
-I hope this can be a valuable contribution to the OWASP community, especially in the areas of token-based authentication and request integrity.
+**RHC** was originally conceptualized and documented in Spanish during the development of a real-world SaaS platform that required secure, stateless, and high-availability communication channels. The technique aligns naturally with **JWT-based authentication**, microservices, and distributed architectures where traditional CSRF protections may be insufficient or incompatible.
 
-### Road Map
-1.- Submit idea for review.
 
-2.- Collect feedback from OWASP community.
+### Key Objectives
+- Introduce unpredictability in token transportation mechanisms.
 
-3.- Adjust documentation if needed and add implementation examples.
+- Reduce token-targeting opportunities during request interception.
 
-4.- Publish and maintain the project as open security documentation.
+- Provide a lightweight and implementation-agnostic layer that complements existing CSRF defenses.
 
+- Facilitate adoption through clear documentation and implementations for developers and security professionals.
+
+
+### Roadmap
+1. Submit the proposal for community review.
+
+2. Collect feedback from OWASP leaders, contributors, and security practitioners.
+
+3. Expand documentation with architecture diagrams, entropy analysis, and practical examples.
+
+4. Publish recommended integration patterns for common frameworks.
+
+5. Maintain the project as open security documentation long-term.
+
+---
+
+## Contribute
+Contributions are welcome. Please submit pull requests, issues, or implementation proposals in the GitHub repository.

@@ -1,22 +1,38 @@
-# Overview
+# Overview — OWASP Randomized Header Channel for CSRF Protection
 
-The Randomized Header Channel (RHC) technique is a mitigation method for Cross-Site Request Forgery (CSRF) attacks. RHC dynamically selects one header from a predefined pool to carry the CSRF token per request, breaking deterministic traffic patterns and making automated replay or interception attacks more difficult.
 
-## Motivation
+## What is RHC?
+The **Randomized Header Channel (RHC)** is a security technique that increases unpredictability in token-based authentication by randomly distributing CSRF-sensitive tokens across multiple valid HTTP headers. Each request selects a header slot at random, increasing entropy and reducing exploitation feasibility.
 
-CSRF attacks exploit predictable token delivery. RHC introduces randomness in token placement to reduce the risk of automated attacks and replay attempts.
 
-## Threat Model
+## Problem Addressed
+Traditional CSRF defenses assume predictable token placement (fixed header, fixed cookie, fixed field). Attackers can automate or intercept these predictable locations.
 
-- **Adversary**: Can send crafted requests from third-party origins but cannot access server-side secrets.  
-- **Goal**: Perform unauthorized actions by predicting token location.  
-- **Limitations**: RHC mitigates but does not fully prevent CSRF attacks; best combined with standard protections.
+RHC disrupts this predictability.
 
-## Goals
 
-- Increase unpredictability of CSRF token delivery.
-- Maintain compatibility with common web frameworks.
-- Provide a clear, concise summary for reviewers and contributors.
+## How RHC Works
+1. Server generates a rotation table with valid header slots.
+2. Client stores the table (session/local storage).
+3. Each request selects a header at random.
+4. Token is transmitted through that header.
+5. Server validates token + slot consistency.
+
+
+## Security Benefits
+- Increased entropy in the delivery mechanism.
+- Harder to predict or intercept transport channel.
+- Prevents token-target automation.
+- Resistant to replay attempts tied to specific header slots.
+- Compatible with stateless systems and JWT.
+
+
+## Use Cases
+- Single-page applications (SPA)
+- Mobile apps communicating via APIs
+- Distributed microservices
+- High-frequency token environments
+
 
 ## References
 
