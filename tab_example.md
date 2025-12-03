@@ -151,14 +151,15 @@ Una rotación invalida:
 ---
 
 ## ✔ 5. Entropía multifactor
-| Factor | Origen |
-|--------|--------|
+
+| Factor              | Origen                |
+|---------------------|-----------------------|
 | Encabezados válidos | Rotados dinámicamente |
-| Tokens | Longitud variable |
-| Decoys | Ruido estadístico |
-| Ruido útil | Dispersión |
-| Distribución | Anti-correlación |
-| Filtro adaptativo | Contextual |
+| Tokens              | Longitud variable     |
+| Decoys              | Ruido estadístico     |
+| Ruido útil          | Dispersión            |
+| Distribución        | Anti-correlación      |
+| Filtro adaptativo   | Contextual            |
 
 El atacante NO puede crear correlación estable.
 
