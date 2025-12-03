@@ -44,9 +44,11 @@ El cliente utiliza una tabla con encabezados válidos y tres tokens CSRF, donde 
 5. El servidor valida el header y el token.
 
 ### **Ejemplo HTTP**
+```http
 POST /v1/payments
 X-RHC-Header-3: Zp7Qm4Ay81FsK9TdHr6W
 Content-Type: application/json
+```
 
 ---
 
@@ -61,19 +63,25 @@ El cliente utiliza encabezados válidos como en los niveles anteriores, pero los
 5. El servidor valida el header y el token.
 
 ### **Ejemplo 1 HTTP** ** — ** *Token largo*
+```http
 POST /v1/payments
 X-CSRF-H3: qP4fA1wZ9kT7mB3sJ2uR8hX0VyM5nLgC
 Content-Type: application/json
+```
 
 ### **Ejemplo 2 HTTP** ** — ** *Token Mediano*
+```http
 POST /v1/payments
 X-CSRF-H1: 73sPqr52WbKJgA4cL3sPYv
 Content-Type: application/json
+```
 
 ### **Ejemplo 3 HTTP** ** — ** *Token Corto*
+```http
 POST /v1/payments
 X-CSRF-H2: fQ9dL7xS1mA4
 Content-Type: application/json
+```
 
 ---
 
@@ -173,6 +181,7 @@ El atacante NO puede crear correlación estable.
 ---
 
 ### **Ejemplo HTTP**
+```http
 POST /v1/identity/update
 X-RHC-H1: Cf9Gx2A7tPqLs91kZb3uQm4NsyW86Rhv   ← decoy
 X-RHC-H4: TmQ8yLr29FvS13KpWg5aXb7cN0HqD4Mt   ← token real (ciclo actual)
@@ -184,6 +193,7 @@ X-RHC-H3: Hc8Lx4Vw1SgD9pQ2tR3mF6aYkB0uZ7Jn   ← decoy
 X-RHC-H8: F2aQp8Vx3WnL7rC1bS9uH4kD0M5tJ6Gz   ← token real (ciclo actual)
 X-RHC-H9: yN1rT5mP8bQ4vS2kJ6aW9gF3D0xH7LzC   ← decoy
 Content-Type: application/json
+```
 
 ---
 
@@ -209,6 +219,3 @@ Pruebas de:
 - canales paralelos
 
 ---
-
-
-
