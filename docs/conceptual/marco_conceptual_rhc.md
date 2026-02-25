@@ -3,6 +3,13 @@
 El **Protocolo RHC (Randomized Header Channel)** no es solo una técnica de seguridad:
 es un marco de criptografía evolutiva que fusiona tres planos de conocimiento:
 
+> Este documento desarrolla formalmente los principios introducidos en
+> el artículo de cambio de paradigma del Protocolo RHC.
+
+> 🧭 La motivación y el cambio de paradigma que dan origen a este marco
+> se presentan en:
+> [Cambio de paradigma: Seguridad de las comunicaciones en sistemas modernos](/docs/paradigm-shift.md)
+
 ---
 
 ## ⚛️ Fundamento físico–matemático
@@ -57,7 +64,11 @@ Pero todo cambió cuando alguien decidió **colonizarlas, no con muros, sino con
 > Hasta que alguien decidió protegerlas, no con muros, sino con propósito.”*  
 > — **Fernando Flores Alvarado, creador del Protocolo RHC**
 
+El Protocolo RHC se fundamenta en una visión donde la seguridad
+no se impone mediante rigidez, sino que **emerge del entendimiento profundo del entorno**.
+
 RHC no conquista, **cultiva**.  
+
 Sembró conocimiento en el terreno del caos digital,  
 convirtiendo la vulnerabilidad en un espacio consciente de seguridad y evolución.  
 
