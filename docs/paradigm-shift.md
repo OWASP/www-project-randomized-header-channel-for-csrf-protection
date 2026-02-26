@@ -330,3 +330,8 @@ Eres libre de compartirlo o adaptarlo siempre que se otorgue la atribución adec
 
 Los avances visuales mencionados en este documento forman parte de un analizador experimental del protocolo RHC.
 El repositorio se mantiene público con fines de investigación y documentación.
+
+---
+
+**© 2025 Fernando Flores Alvarado — RHC Protocol Core**  
+Publicado bajo licencias duales: *Apache 2.0 (código)* y *CC BY 4.0 (documentación)*. 
