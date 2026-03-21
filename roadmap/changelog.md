@@ -27,7 +27,7 @@ Este documento sigue la convención **SemVer (Semantic Versioning)** en el forma
 - 📘 Documentación técnica principal:
   - `README.md` — Descripción general, licencias y estructura.
   - `methodology.md` — Fundamento técnico del protocolo.
-  - `license_alignment.md` — Compatibilidad dual de licencias.
+  - `LICENSE_ALIGNMENT.md` — Compatibilidad dual de licencias.
   - `references.md` — Fuentes teóricas y de publicación.
 - ⚖️ Inclusión de licencias:
   - `LICENSE` — Apache License 2.0 (código y PoC).
@@ -104,5 +104,3 @@ Define el estándar documental y técnico para futuras expansiones.
 
 **© 2025 Fernando Flores Alvarado — RHC Protocol Core**  
 Licencias: *Apache 2.0 (código)* + *CC BY 4.0 (documentación)*  
-
-> 🌐 This changelog is also available in [English](./changelog_EN.md)

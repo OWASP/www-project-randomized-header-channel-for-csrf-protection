@@ -42,7 +42,7 @@
  */
 
 	// Incluir protección para evitar ejecución directa o acceso no autorizado.
-	require_once __DIR__ . './endpoint_protector.php'; 
+	require_once realpath(__DIR__ . '/endpoint_protector.php');
 
 	/**
 	 * ============================================================================
