@@ -34,7 +34,7 @@
  * ==========================================================
  */
 
-	require_once __DIR__ . './entropy_lib.php';
+	require_once realpath(__DIR__ . '/entropy_lib.php');
 
 	// Leer parámetro (puede venir del JS frontend)
 	$input = $_GET['data'] ?? '';

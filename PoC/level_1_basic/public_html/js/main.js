@@ -45,9 +45,9 @@
 	// URL base del API
 	const hostname = window.location.hostname;
 	const apiURL = ["localhost", "127.0.0.1"].includes(hostname)
-		? "http://localhost/www-project-randomized-header-channel-for-csrf-protection/PoC/level_1_basic/api/"
+		? "https://localhost/www-project-randomized-header-channel-for-csrf-protection/PoC/level_1_basic/api/"
 		: hostname === "www.www-project-randomized-header-channel-for-csrf-protection.test"
-			? "https://api.www-project-randomized-header-channel-for-csrf-protection.test/"
+			? "https://www.www-project-randomized-header-channel-for-csrf-protection.test/PoC/level_1_basic/api/"
 			: "";
 
 	console.log("Host:", hostname);
