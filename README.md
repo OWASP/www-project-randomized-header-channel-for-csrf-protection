@@ -128,7 +128,15 @@ RHC_Protocol_Core/
 │   └── README.md                     → Descripción de los recursos.
 │
 ├── 📘 docs/                          → Documentación técnica, conceptual y referencias.
-│   └── conceptual/                   → Documentación conceptual profunda.
+│   │
+│   ├── adoption/                     → Guías de adopción, integración y alineación.
+│   │   ├── ecosystem-alignment.md    → Alineación del RHC con estándares y marcos de seguridad.
+│   │   ├── integration.md            → Enfoque de integración del protocolo en sistemas existentes.
+│   │   ├── reviewer-guide.md         → Guía para evaluadores del proyecto RHC.
+│   │   ├── threat-model.md           → Modelo de amenazas y superficie de ataque.
+│   │   └── terminology.md            → Definiciones y conceptos clave utilizados.
+│   │
+│   ├── conceptual/                   → Documentación conceptual profunda.
 │   │   └── marco_conceptual_rhc.md
 │   │
 │   ├── methodology.md                → Fundamentos físico–matemáticos del protocolo.
@@ -347,6 +355,16 @@ preservando tanto la **integridad de la seguridad** como la **atribución intele
 > es un modelo de seguridad que evoluciona dentro de cada sistema.
 
 ---
+
+### 📂 Guía de documentación
+
+### 📘 Guías de adopción, integración y alineación.
+
+- [🔧 Enfoque de integración](./docs/adoption/integration.md)
+- [🛡️ Modelo de amenazas](./docs/adoption/threat-model.md)
+- [📘 Guía para revisores](./docs/adoption/reviewer-guide.md)
+- [🧠 Terminología](./docs/adoption/terminology.md)
+- [🌐 Alineación con el ecosistema](./docs/adoption/ecosystem-alignment.md)
 
 ### 📘 Documentación Técnica
 
