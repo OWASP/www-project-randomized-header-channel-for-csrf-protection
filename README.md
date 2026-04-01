@@ -156,6 +156,13 @@ RHC_Protocol_Core/
 │   ├── level_4_dynamic_adaptive/     → Nivel dinámico–adaptativo: dispersión inteligente y decoys.
 │   └── README.md                     → Índice y descripción general de los niveles PoC.
 │
+├── 🧰 resources/                     → Recursos prácticos reutilizables para implementación.
+│   ├── security-headers/             → Configuración de encabezados HTTP de seguridad (PHP)
+│   │   ├── wa_config2_encabezados.php → Implementación en español
+│   │   ├── wa_config2_headers.php     → Implementación en inglés
+│   │   └── README.md                  → Documentación del recurso
+│   └── README.md                     → Índice y descripción de recursos reutilizables
+│
 ├── 🌐 publications/                  → Publicaciones externas y borradores.
 │   ├── medium/
 │   │   └── article_links.md          → Enlaces a publicaciones en Medium.
