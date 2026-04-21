@@ -34,13 +34,6 @@ www-project-randomized-header-channel-for-csrf-protection/
 │
 ├── 📘 docs/                             → Documentación técnica, conceptual y referencias.
 │   │
-│   ├── rhc-level-4-extensibility/       → Documentación extendida del Nivel 4
-│   │   ├── attack-scenarios.md             → Comportamiento del canal ante ataques (Cómo responde el canal)
-│   │   ├── attack-scenarios-intuition.md   → Explicación intuitiva de escenarios
-│   │   ├── extensibility.md                → Arquitectura extensible y restricciones de diseño
-│   │   ├── formal-model.md                 → Formalización matemática del canal
-│   │   └── formal-model-overview.md        → Versión intuitiva del modelo (lectura accesible)
-│   │
 │   ├── adoption/                        → Guías de adopción, integración y alineación
 │   │   ├── ecosystem-alignment.md       → Alineación con estándares y marcos de seguridad
 │   │   ├── integration.md               → Enfoque de integración en sistemas existentes
@@ -51,17 +44,28 @@ www-project-randomized-header-channel-for-csrf-protection/
 │   ├── conceptual/                      → Documentación conceptual profunda
 │   │   └── marco_conceptual_rhc.md
 │   │
-│   ├── methodology.md                   → Fundamentos físico-matemáticos del protocolo
-│   ├── overview.md                      → Vista general del protocolo
+│   ├── rhc-level-4-extensibility/       → Documentación extendida del Nivel 4
+│   │   ├── attack-scenarios.md             → Comportamiento del canal ante ataques (Cómo responde el canal)
+│   │   ├── attack-scenarios-intuition.md   → Explicación intuitiva de escenarios
+│   │   ├── complexity-model.md             → Modelo de complejidad del canal: crecimiento progresivo y no lineal del espacio de búsqueda del atacante (Ω)
+│   │                                         Extensibilidad del Nivel 4: diseño abierto del canal y evolución dinámica de su complejidad
+│   │   ├── extensibility.md                → Arquitectura extensible y restricciones de diseño
+│   │   ├── formal-model.md                 → Formalización matemática del canal
+│   │   └── formal-model-overview.md        → Versión intuitiva del modelo (lectura accesible)
+│   │
 │   ├── architecture.md                  → Arquitectura del sistema RHC
-│   ├── paradigm-shift.md                → Cambio de paradigma en seguridad
+│   ├── breaker.md                       → Análisis de ruptura / testing de seguridad
+│   ├── builder.md                       → Construcción e implementación del protocolo
+│   ├── entropy-analyzer-roadmap.md      → Roadmap del Analizador de entropía RHC: Fases progresivas del análisis del canal, su comportamiento dinámico y métricas RHC.
 │   ├── examples.md                      → Ejemplos HTTP oficiales de los 4 niveles del protocolo
 │   ├── installation.md                  → Guía de instalación
-│   ├── builder.md                       → Construcción e implementación del protocolo
-│   ├── breaker.md                       → Análisis de ruptura / testing de seguridad
+│   ├── methodology.md                   → Fundamentos físico-matemáticos del protocolo
+│   ├── overview.md                      → Vista general del protocolo
+│   ├── paradigm-shift.md                → Cambio de paradigma en seguridad
 │   ├── references.md                    → Fuentes teóricas y artículos citados
+│   ├── repository-structure.md          → Este documento 
 │   ├── rhc-ns-01_naming_standard.md     → Estándar de nombres RHC-NS-01
-│   └── repository-structure.md          → Este documento 
+│   └── scope-and-limitations.md         → Alcance técnico y limitaciones conocidas
 │
 ├── 🧪 PoC/                              → Implementaciones demostrativas del protocolo
 │   ├── level_1_basic/                   → Nivel básico: tres headers y un token

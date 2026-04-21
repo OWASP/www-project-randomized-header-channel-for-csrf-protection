@@ -83,8 +83,8 @@ Ver [`docs/adoption/ecosystem-alignment.md`](./ecosystem-alignment.md) para el m
 | Marco conceptual (FCHA / CIL) | ✅ Completo |
 | Documentación en español | ✅ Completo |
 | PoC Niveles 1–4 (PHP) | ✅ Funcional |
-| Analizador de entropía (visualización) | 🔄 ~70% completo |
-| Documentación en inglés | 🔄 En progreso |
+| Analizador de entropía — Fase 1 (Básico) | ✅ Publicado (integrado en Nivel 4 PoC) |
+| Analizador de entropía — Fase 2 (Pro) | 🔄 En desarrollo — ver [roadmap](../entropy-analyzer-roadmap.md) |
 | Middleware PSR-15 | 🔄 En desarrollo |
 | Revisión comunitaria independiente | 🔜 Pendiente |
 | Envío formal CAPEC (MITRE) | 🔜 En preparación |

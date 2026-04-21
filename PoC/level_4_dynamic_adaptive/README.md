@@ -300,7 +300,9 @@ La interfaz permite:
 - Medir entropía del ciclo actual
 - Activar modos avanzados: ruido alto, tokens dinámicos, rotaciones rápidas
 
-El **Entropy Lab** (`public_html/entropy/`) muestra métricas en tiempo real: distribución de headers, variabilidad de tokens, detección de anomalías y análisis de secuencias (MegaCadena).
+El **Entropy Lab** (`public_html/entropy/`) corresponde a la **Fase 1** del Analizador de entropía RHC: muestra entropía Shannon por header, por token y entropía total de la solicitud actual.
+
+> 📋 Para el alcance completo del analizador y sus fases de desarrollo, ver: [`docs/entropy-analyzer-roadmap.md`](../../docs/entropy-analyzer-roadmap.md)
 
 ---
 

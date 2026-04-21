@@ -152,6 +152,8 @@ Este es el escenario base. Cuando se activa la **mutación estructural** — com
 
 > El objetivo de RHC es maximizar `Ω` bajo restricciones operativas, sin comprometer la verificabilidad interna del sistema.
 
+> Para escenarios de mayor complejidad — listas separadas, tokens variables, selección matemática y composición de métodos — ver [`complexity-model.md`](./complexity-model.md).
+
 ---
 
 ## 6. Integración con Sistemas Adaptativos

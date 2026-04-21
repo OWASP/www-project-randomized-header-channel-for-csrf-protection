@@ -228,7 +228,7 @@ X-RHC-H9: yN1rT5mP8bQ4vS2kJ6aW9gF3D0xH7LzC   ← decoy
 Content-Type: application/json
 ```
 
-> Para la implementación funcional de este nivel, incluyendo el Entropy Viewer y el análisis de métricas, ver:  
+> Para la implementación funcional de este nivel, incluyendo el **Analizador de entropía RHC** con el análisis de métricas, ver:  
 > [`PoC/level_4_dynamic_adaptive/`](../PoC/level_4_dynamic_adaptive/)
 
 > Para la documentación extendida del Nivel 4 (modelo formal, escenarios de ataque, extensibilidad), ver:  

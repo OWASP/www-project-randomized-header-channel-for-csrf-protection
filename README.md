@@ -399,20 +399,22 @@ RHC es especialmente relevante en contextos donde la validación de identidad so
 | Marco conceptual (FCHA / CIL) | ✅ Completo |
 | Documentación en español | ✅ Completo |
 | PoC Niveles 1–4 (PHP) | ✅ Funcional |
-| Analizador de entropía (visualización) | 🔄 ~70% completo |
-| Documentación en inglés | 🔄 En progreso |
+| Analizador de entropía — Fase 1 (Básico) | ✅ Publicado (integrado en Nivel 4 PoC) |
+| Analizador de entropía — Fase 2 (Pro) | 🔄 En desarrollo — ver [roadmap](./docs/entropy-analyzer-roadmap.md) |
 | Middleware PSR-15 | 🔄 En desarrollo |
 | Revisión comunitaria independiente | 🔜 Pendiente |
 | Envío formal CAPEC (MITRE) | 🔜 En preparación |
 
 ---
 
-## 🔬 Avance del Analizador RHC
+## 🔬 Avance del Analizador de entropía RHC - Fase 2 (en desarrollo)
 
 ![Avance del analizador RHC](assets/images/avance-rhc-channel-entropy-metrics-viewer.png)  
 
-*Avance del analizador RHC: visualización de métricas de entropía y coherencia del canal a lo largo de una secuencia de solicitudes (Linea de tiempo).  
+*Vista preliminar del Analizador de entropía RHC en fase laboratorio: visualización de métricas de entropía y coherencia del canal a lo largo de una secuencia de solicitudes (Linea de tiempo).  
 La herramienta permite observar patrones, rupturas y variabilidad contextual entre headers y tokens.*  
+
+> 📋 **Fase actual:** Phase 2 — En desarrollo (laboratorio) | Ver fases oficiales: [`docs/entropy-analyzer-roadmap.md`](./docs/entropy-analyzer-roadmap.md)
 
 ---
 
