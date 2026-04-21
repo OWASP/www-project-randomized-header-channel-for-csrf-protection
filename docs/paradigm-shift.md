@@ -333,8 +333,10 @@ Eres libre de compartirlo o adaptarlo siempre que se otorgue la atribución adec
 
 ## Nota técnica
 
-Los avances visuales mencionados en este documento forman parte de un analizador experimental del protocolo RHC.
-El repositorio se mantiene público con fines de investigación y documentación.
+Los avances visuales mencionados en este documento forman parte del **Analizador de entropía RHC** del protocolo RHC, actualmente en **Phase 2 — desarrollo (laboratorio)**.  
+El repositorio se mantiene público con fines de investigación y documentación.  
+
+> Ver fases oficiales del analizador: [`docs/entropy-analyzer-roadmap.md`](./entropy-analyzer-roadmap.md)
 
 ---
 **© 2025 Fernando Flores Alvarado — RHC Protocol Core**  

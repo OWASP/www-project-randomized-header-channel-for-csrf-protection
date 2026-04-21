@@ -229,6 +229,10 @@ https://www.www-project-randomized-header-channel-for-csrf-protection.test/PoC/l
 
 El visor muestra métricas en tiempo real del canal: distribución de headers, variabilidad de tokens, detección de anomalías y análisis de secuencias (MegaCadena).
 
+El **Analizador de entropía RHC** (`public_html/entropy/`) corresponde a la **Fase 1** del Analizador de entropía RHC: muestra entropía Shannon por header, por token y entropía total de la solicitud actual.
+
+> 📋 Para el alcance completo del analizador y sus fases de desarrollo, ver: [`docs/entropy-analyzer-roadmap.md`](./entropy-analyzer-roadmap.md)
+
 ---
 
 ## Observaciones de seguridad
