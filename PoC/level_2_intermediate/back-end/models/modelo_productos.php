@@ -7,7 +7,7 @@
  *  Esta capa abstrae el origen de los datos y permite
  *  su consumo por el controlador sin exponer detalles internos.
  * 
- *  @file        back-end/models/modelo-productos.php
+ *  @file        back-end/models/modelo_productos.php
  * 
  *  @project     RHC Protocol Core
  *  @implementation Nivel 2 — Intermedio

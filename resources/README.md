@@ -1,4 +1,15 @@
+> ℹ️ **Note:** This document is written in Spanish. You can use your browser to translate it into English.
+> The Spanish version is preserved intentionally as part of the project's authorship and intellectual identity.
+
 # 🧰 Recursos
+
+**Autor:** Fernando Flores Alvarado  
+**Proyecto Original:** RHC Protocol Core — (Randomized Header Channel)  
+**Proyecto OWASP:** Randomized Header Channel for CSRF Protection (RHC)  
+**Licencia:** CC BY 4.0 (documentación)  
+Información detallada sobre versiones, fechas, estado y metadatos completos, consulta [`VERSION.md`](../VERSION.md).
+
+---
 
 Este directorio contiene recursos prácticos y reutilizables diseñados para apoyar la implementación en el mundo real de conceptos de seguridad relacionados con el Protocolo RHC.
 
@@ -38,3 +49,7 @@ Mientras que RHC se enfoca en la **integridad de la comunicación**, los recurso
 Ambas capas están diseñadas para trabajar juntas.
 
 ---
+**© 2025 Fernando Flores Alvarado — RHC Protocol Core**  
+Publicado bajo [Creative Commons BY 4.0](../LICENSE_CC.md).
+
+> *“Compartir con responsabilidad es inspirar para construir el futuro.”*

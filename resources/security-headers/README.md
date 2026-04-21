@@ -1,4 +1,15 @@
+> ℹ️ **Note:** This document is written in Spanish. You can use your browser to translate it into English.
+> The Spanish version is preserved intentionally as part of the project's authorship and intellectual identity.
+
 # 🛡️ Configuración de Encabezados de Seguridad (PHP)
+
+**Autor:** Fernando Flores Alvarado  
+**Proyecto Original:** RHC Protocol Core — (Randomized Header Channel)  
+**Proyecto OWASP:** Randomized Header Channel for CSRF Protection (RHC)  
+**Licencia:** CC BY 4.0 (documentación)  
+Información detallada sobre versiones, fechas, estado y metadatos completos, consulta [`VERSION.md`](../../VERSION.md).
+
+---
 
 Este recurso proporciona una implementación práctica, completa y orientada a producción para configurar encabezados HTTP de seguridad en aplicaciones web desarrolladas en PHP.
 
@@ -144,12 +155,15 @@ Este recurso también está listado en el **[OWASP Secure Headers Project](https
 
 ---
 
-## ⚖️ Licencia
+## 📜 Licencia
 
 Este recurso se distribuye bajo:
 
-- Apache License 2.0 (código)
-- CC BY 4.0 (documentación)
+- **Código fuente y scripts:** [Apache License 2.0](../../LICENSE.md)
+- **Documentación y diagramas:** [Creative Commons BY 4.0](../../LICENSE_CC.md)
+
+> © 2025 Fernando Flores Alvarado — RHC Protocol Core  
+> *“Compartir con responsabilidad es inspirar para construir el futuro.”*
 
 ---
 

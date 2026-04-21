@@ -6,7 +6,7 @@
  *  Define cómo interactuar con el modelo y procesa los datos
  *  aplicando validaciones, conversiones y lógica de negocio.
  * 
- *  @file        back-end/controllers/controlador-productos.php
+ *  @file        back-end/controllers/controlador_productos.php
  * 
  *  @project     RHC Protocol Core
  *  @implementation Nivel 1 — Básico

@@ -44,3 +44,11 @@ _site/
 
 # Archivos personales que NO se suben
 .Notas_Generales.txt
+
+# Archivos para la NUEVA PLATAFORMA OWASP NO se suben
+# Contenido de la portada
+.OWASP_Platform_Page_RHC.md
+.OWASP_Platform_Page_RHC.docx
+
+# Contenido de los ejemplos anteriores de la portada
+.OWASP_examples_ANT.md

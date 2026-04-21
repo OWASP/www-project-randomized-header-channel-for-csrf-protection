@@ -1,4 +1,15 @@
+> ℹ️ **Note:** This document is written in Spanish. You can use your browser to translate it into English.
+> The Spanish version is preserved intentionally as part of the project's authorship and intellectual identity.
+
 # 🖼️ Carpeta: Assets / Images
+
+**Autor:** Fernando Flores Alvarado  
+**Proyecto Original:** RHC Protocol Core — (Randomized Header Channel)  
+**Proyecto OWASP:** Randomized Header Channel for CSRF Protection (RHC)  
+**Licencia:** CC BY 4.0 (documentación)  
+Información detallada sobre versiones, fechas, estado y metadatos completos, consulta [`VERSION.md`](../../VERSION.md).
+
+---
 
 Esta subcarpeta almacena las **imágenes, diagramas y logotipos** relacionados  
 con el protocolo **RHC (Randomized Header Channel)** y su modelo de **Caos Controlado**.

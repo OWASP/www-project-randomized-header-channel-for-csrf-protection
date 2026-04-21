@@ -1,9 +1,13 @@
+> ℹ️ **Note:** This document is written in Spanish. You can use your browser to translate it into English.
+> The Spanish version is preserved intentionally as part of the project's authorship and intellectual identity.
+
 # 📄 Publicaciones académicas (arXiv) — RHC Protocol Core
 
 **Autor:** Fernando Flores Alvarado  
-**Licencia:** CC BY 4.0  
-**Última actualización:** Noviembre 2025  
-
+**Proyecto Original:** RHC Protocol Core — (Randomized Header Channel)  
+**Proyecto OWASP:** Randomized Header Channel for CSRF Protection (RHC)  
+**Licencia:** CC BY 4.0 (documentación)  
+Información detallada sobre versiones, fechas, estado y metadatos completos, consulta [`VERSION.md`](../../VERSION.md).
 ---
 
 ## 🎓 Propósito
@@ -25,4 +29,10 @@ y materiales de investigación que formarán parte de la publicación formal del
 ---
 
 > 🧭 Todos los trabajos científicos deben citar:  
-> *Flores Alvarado, F. (2025). RHC Protocol Core — Caos Controlado en Arquitectura de Seguridad Web.*
+> *Flores Alvarado, Fernando. (2025). RHC Protocol Core — Caos Controlado en Arquitectura de Seguridad Web.*
+
+---
+**© 2025 Fernando Flores Alvarado — RHC Protocol Core**  
+Publicado bajo [Creative Commons BY 4.0](../../LICENSE_CC.md).
+
+> *“Compartir con responsabilidad es inspirar para construir el futuro.”*

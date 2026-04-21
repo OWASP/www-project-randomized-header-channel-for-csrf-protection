@@ -1,23 +1,21 @@
+> ℹ️ **Note:** This document is written in Spanish. You can use your browser to translate it into English.
+> The Spanish version is preserved intentionally as part of the project's authorship and intellectual identity.
+
 # 📘 RHC-NS-01 — Naming Standard Specification  
 **Estándar de Nomenclatura para Archivos, Clases y Funciones del Protocolo RHC**
-
-**Documento Técnico Interno — RHC Protocol Core**  
-**Versión:** 1.0  
-**Fecha:** Noviembre 2025  
-**Autor:** Fernando Flores Alvarado  
-**Estado:** Aprobado  
-**Distribución:** Pública (OWASP / Referencia académica)
-
----
 
 ## 🧾 Especificación Detallada — RHC-NS-01
 
 
 **Nombre:** Convención de Nombres de Archivos — Protocolo RHC  
-**Versión:** 1.0  
-**Estatus:** Estándar Interno  
+
 **Autor:** Fernando Flores Alvarado  
-**Proyecto:** RHC Protocol Core  
+**Proyecto Original:** RHC Protocol Core — (Randomized Header Channel)  
+**Proyecto OWASP:** Randomized Header Channel for CSRF Protection (RHC)  
+**Licencia:** Apache 2.0 (código) + CC BY 4.0 (documentación)  
+Información detallada sobre versiones, fechas, estado y metadatos completos, consulta [`VERSION.md`](../VERSION.md).
+
+**Distribución:** Pública (OWASP / Referencia académica)
 
 ---
 
@@ -104,3 +102,13 @@ y el prefijo `rhc_` para mantener coherencia con la nomenclatura del núcleo.
 
 > **Referencia:** Documento técnico interno **RHC-NS-01 — File, Class & Function Naming Standard**  
 > (Revisión 1.0 — Noviembre 2025)
+
+---
+
+## 📜 Licencia
+
+- **Código fuente y scripts:** [Apache License 2.0](../LICENSE.md)
+- **Documentación y diagramas:** [Creative Commons BY 4.0](../LICENSE_CC.md)
+
+> © 2025 Fernando Flores Alvarado — RHC Protocol Core  
+> *“Compartir con responsabilidad es inspirar para construir el futuro.”*

@@ -1,4 +1,15 @@
+> ℹ️ **Note:** This document is written in Spanish. You can use your browser to translate it into English.
+> The Spanish version is preserved intentionally as part of the project's authorship and intellectual identity.
+
 # 🧠 Marco Conceptual Expandido — Dispersión, Entropía y Evolución
+
+**Autor:** Fernando Flores Alvarado  
+**Proyecto Original:** RHC Protocol Core — (Randomized Header Channel)  
+**Proyecto OWASP:** Randomized Header Channel for CSRF Protection (RHC)  
+**Licencia:** CC BY 4.0 (documentación)  
+Información detallada sobre versiones, fechas, estado y metadatos completos, consulta [`VERSION.md`](../../VERSION.md).
+
+---
 
 El **Protocolo RHC (Randomized Header Channel)** no es solo una técnica de seguridad:
 es un marco de criptografía evolutiva que fusiona tres planos de conocimiento:
@@ -8,7 +19,7 @@ es un marco de criptografía evolutiva que fusiona tres planos de conocimiento:
 
 > 🧭 La motivación y el cambio de paradigma que dan origen a este marco
 > se presentan en:
-> [Cambio de paradigma: Seguridad de las comunicaciones en sistemas modernos](/docs/paradigm-shift.md)
+> [Cambio de paradigma: Seguridad de las comunicaciones en sistemas modernos](../paradigm-shift.md)
 
 ---
 
@@ -84,5 +95,7 @@ En su esencia, el protocolo refleja una verdad humana y universal:
 > “Compartir con responsabilidad, es inspirar para construir el futuro.”
 
 ---
+**© 2025 Fernando Flores Alvarado — RHC Protocol Core**  
+Publicado bajo [Creative Commons BY 4.0](../../LICENSE_CC.md).
 
-**© 2025 Fernando Flores Alvarado — Proyecto RHC Protocol — Todos los derechos reservados bajo las licencias indicadas.**  
+> *“Compartir con responsabilidad es inspirar para construir el futuro.”*

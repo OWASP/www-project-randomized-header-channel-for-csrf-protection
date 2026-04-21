@@ -1,5 +1,15 @@
+> ℹ️ **Note:** This document is written in Spanish. You can use your browser to translate it into English.
+> The Spanish version is preserved intentionally as part of the project's authorship and intellectual identity.
 
 # RHC – Mapeo con Marcos de Seguridad
+
+**Autor:** Fernando Flores Alvarado  
+**Proyecto Original:** RHC Protocol Core — (Randomized Header Channel)  
+**Proyecto OWASP:** Randomized Header Channel for CSRF Protection (RHC)  
+**Licencia:** CC BY 4.0 (documentación)  
+Información detallada sobre versiones, fechas, estado y metadatos completos, consulta [`VERSION.md`](../../VERSION.md).
+
+---
 
 ## Visión General
 El **Randomized Header Channel (RHC)** es un **mecanismo proactivo de endurecimiento en la capa de comunicación**.
@@ -77,3 +87,9 @@ Que RHC reemplaza el cifrado, la autenticación o el OWASP Top 10.
 
 RHC no construye muros.
 Cambia el terreno.
+
+---
+**© 2025 Fernando Flores Alvarado — RHC Protocol Core**  
+Publicado bajo [Creative Commons BY 4.0](../../LICENSE_CC.md).
+
+> *“Compartir con responsabilidad es inspirar para construir el futuro.”*
