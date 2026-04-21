@@ -1,25 +1,42 @@
-# Builder Profile — RHC Project
+> ℹ️ **Note:** This document is written in Spanish. You can use your browser to translate it into English.
+> The Spanish version is preserved intentionally as part of the project's authorship and intellectual identity.
 
-## Overview
-The **Builder** role focuses on designing, implementing, and maintaining secure mechanisms based on the Randomized Header Channel (RHC). Builders ensure correct integration of the technique into applications, services, or middleware.
+# Perfil Builder — Proyecto RHC  
 
-## Responsibilities
-- Develop reference implementations of RHC.
-- Create documentation and code samples for developers.
-- Implement PSR-15 middleware and adapters for frameworks.
-- Design integration patterns for REST APIs and distributed architectures.
-- Collaborate with Breakers to validate security assumptions.
-- Maintain project structure, coding standards, and CI workflows.
+**Autor:** Fernando Flores Alvarado  
+**Proyecto Original:** RHC Protocol Core — (Randomized Header Channel)  
+**Proyecto OWASP:** Randomized Header Channel for CSRF Protection (RHC)  
+**Licencia:** CC BY 4.0 (documentación)  
+Información detallada sobre versiones, fechas, estado y metadatos completos, consulta [`VERSION.md`](../VERSION.md).
 
-## Skills Required
-- Strong understanding of web security fundamentals.
-- Experience with HTTP protocols, headers, and token-based authentication.
-- Knowledge of middleware patterns (PSR-15, Express.js, Django, etc.).
-- Familiarity with JWT, OAuth2, session security, and CSRF defenses.
-- Ability to document and maintain long-term open-source projects.
+---
 
-## Contribution Areas
-- Middleware examples for multiple languages.
-- Utility libraries for header rotation management.
-- Developer-focused documentation.
-- Performance and entropy analysis tools.
+## Visión General
+El rol de **Builder** se enfoca en diseñar, implementar y mantener mecanismos seguros basados en RHC.
+
+## Responsabilidades
+- Desarrollar implementaciones de RHC.
+- Crear documentación y ejemplos.
+- Implementar middleware PSR-15.
+- Diseñar integraciones para APIs REST.
+- Colaborar con Breakers.
+- Mantener estándares y CI.
+
+## Habilidades Requeridas
+- Seguridad web.
+- HTTP y autenticación basada en tokens.
+- Middleware (PSR-15, Express, Django).
+- JWT, OAuth2, sesiones y CSRF.
+- Documentación técnica.
+
+## Áreas de Contribución
+- Middleware en varios lenguajes.
+- Librerías de rotación de headers.
+- Documentación para desarrolladores.
+- Herramientas de análisis.
+
+---
+**© 2025 Fernando Flores Alvarado — RHC Protocol Core**  
+Publicado bajo [Creative Commons BY 4.0](../LICENSE_CC.md).
+
+> *“Compartir con responsabilidad es inspirar para construir el futuro.”*

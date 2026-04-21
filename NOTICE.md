@@ -1,3 +1,6 @@
+> ℹ️ **Note:** This document is written in Spanish. You can use your browser to translate it into English.
+> The Spanish version is preserved intentionally as part of the project's authorship and intellectual identity.
+
 # 🧾 RHC Protocol Core  
 **Copyright © 2025 — Fernando Flores Alvarado**
 

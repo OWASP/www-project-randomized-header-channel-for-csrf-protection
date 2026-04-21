@@ -1,8 +1,13 @@
-# Cambio de Paradigma — Asegurando los Canales de Comunicación en Sistemas Modernos
+> ℹ️ **Note:** This document is written in Spanish. You can use your browser to translate it into English.
+> The Spanish version is preserved intentionally as part of the project's authorship and intellectual identity.
 
-**Autor:** Fernando Flores Alvarado
-**Fecha:** Enero de 2026
-**Licencia:** Creative Commons Atribución 4.0 Internacional (CC BY 4.0)
+# Cambio de Paradigma — Asegurando los Canales de Comunicación en Sistemas Modernos  
+
+**Autor:** Fernando Flores Alvarado  
+**Proyecto Original:** RHC Protocol Core — (Randomized Header Channel)  
+**Proyecto OWASP:** Randomized Header Channel for CSRF Protection (RHC)  
+**Licencia:** CC BY 4.0 (documentación)  
+Información detallada sobre versiones, fechas, estado y metadatos completos, consulta [`VERSION.md`](../VERSION.md).
 
 ---
 
@@ -332,6 +337,7 @@ Los avances visuales mencionados en este documento forman parte de un analizador
 El repositorio se mantiene público con fines de investigación y documentación.
 
 ---
-
 **© 2025 Fernando Flores Alvarado — RHC Protocol Core**  
-Publicado bajo licencias duales: *Apache 2.0 (código)* y *CC BY 4.0 (documentación)*. 
+Publicado bajo [Creative Commons BY 4.0](../LICENSE_CC.md).
+
+> *“Compartir con responsabilidad es inspirar para construir el futuro.”*

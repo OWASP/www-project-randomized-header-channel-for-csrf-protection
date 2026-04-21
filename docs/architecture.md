@@ -1,59 +1,75 @@
-# Architecture & Conceptual Model — Randomized Header Channel (RHC)
+> ℹ️ **Note:** This document is written in Spanish. You can use your browser to translate it into English.
+> The Spanish version is preserved intentionally as part of the project's authorship and intellectual identity.
 
-## Conceptual Diagram
+# Arquitectura y Modelo Conceptual — Randomized Header Channel (RHC)  
+
+**Autor:** Fernando Flores Alvarado  
+**Proyecto Original:** RHC Protocol Core — (Randomized Header Channel)  
+**Proyecto OWASP:** Randomized Header Channel for CSRF Protection (RHC)  
+**Licencia:** CC BY 4.0 (documentación)  
+Información detallada sobre versiones, fechas, estado y metadatos completos, consulta [`VERSION.md`](../VERSION.md).
+
+---
+
+## Diagrama Conceptual
 ```text
-Client → [Random Slot Selection] → HTTP Request → Server
+Cliente → [Selección de Slot Aleatorio] → Solicitud HTTP → Servidor
 
 Headers: H1 | H2 | H3 | … | Hn
-Only one header contains the valid token.
+Solo un header contiene el token válido.
 ```
+ 
+---
+
+## Componentes
+
+### **1. Tabla de Rotación**
+Una lista definida de headers válidos autorizados para transportar el token de seguridad.
+
+### **2. Algoritmo de Selección de Slot**
+Un algoritmo impulsado por aleatoriedad que selecciona un header de entre `n` canales disponibles en cada solicitud.
+
+### **3. Transporte del Token**
+El token se incrusta en el header seleccionado, garantizando:
+- 🔒 Impredecibilidad
+- 🛡 Reducción de la exposición a ataques dirigidos al token
+- ⚙ Compatibilidad con sistemas sin estado (stateless) y distribuidos
+
+### **4. Capa de Validación**
+El servidor valida la solicitud verificando:
+- ✔ Que el header seleccionado exista
+- ✔ Que el índice del header pertenezca a la tabla de rotación
+- ✔ Firma, estructura e integridad del token
+- ✔ Expiración, marcas de tiempo y requisitos de frescura
 
 ---
 
-## Components
+## 📊 Modelo de Entropía
+```
+entropía ≈ log2(n)
++ calidad de aleatoriedad (PRNG / CSPRNG)
++ frecuencia de solicitudes
+```
 
-### **1. Rotation Table**
-A defined list of valid headers authorized to transport the security token.
-
-### **2. Slot Selection Algorithm**
-A randomness‑driven algorithm that selects **one header slot** from `n` available channels on each request.
-
-### **3. Token Transport**
-The token is embedded into the selected header, ensuring:
-- 🔒 Unpredictability
-- 🛡 Reduced token‑targeting exposure
-- ⚙ Compatibility with stateless + distributed systems
-
-### **4. Validation Layer**
-The server validates the request by verifying:
-- ✔ The selected header exists
-- ✔ The header index belongs to the rotation table
-- ✔ Token signature, structure, and integrity
-- ✔ Expiration, timestamps, and freshness requirements
+➡ Incrementar `n` aumenta la impredecibilidad y fortalece la resistencia contra ataques de replay, automatización e interceptación.
 
 ---
 
-## 📊 Entropy Model
-```
-entropy ≈ log2(n)            → number of valid header slots
-+ randomness quality          → PRNG / CSPRNG
-+ request frequency           → distribution of rotations
-```
-
-➡ Increasing `n` (rotation width) → increases unpredictability → strengthens resistance against replay, automation, and interception attacks.
-
----
-
-## Deployment Diagram
+## Diagrama de Despliegue
 ```text
-Client Application
+Aplicación Cliente
         ↓
-RHC Client Library
+Librería Cliente RHC
         ↓
 API Gateway / Middleware (PSR-15)
         ↓
-RHC Validation Layer
+Capa de Validación RHC
         ↓
-Application Services
+Servicios de la Aplicación
 ```
 
+---
+**© 2025 Fernando Flores Alvarado — RHC Protocol Core**  
+Publicado bajo [Creative Commons BY 4.0](../LICENSE_CC.md).
+
+> *“Compartir con responsabilidad es inspirar para construir el futuro.”*
