@@ -40,7 +40,7 @@ El servidor valida la solicitud verificando:
 - ✔ Que el header seleccionado exista
 - ✔ Que el índice del header pertenezca a la tabla de rotación
 - ✔ Firma, estructura e integridad del token
-- ✔ Expiración, marcas de tiempo y requisitos de frescura
+- ✔ Expiración, marcas de tiempo y requisitos de refresh
 
 ---
 

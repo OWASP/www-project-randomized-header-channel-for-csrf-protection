@@ -101,7 +101,7 @@ level_2_intermediate/
 │   └── index.php                       → Interfaz simple para realizar solicitudes al servidor.
 │
 ├── .htaccess                           → Protección mínima del entorno (bloquea listado de directorios y exposición de archivos).
-└── README.md                           → Documento de referencia del nivel básico.
+└── README.md                           → Documento de referencia del nivel intermedio.
 ```
 
 ---
@@ -112,6 +112,22 @@ level_2_intermediate/
 - Simular entornos realistas con **encabezados múltiples** y **tokens variables**.  
 - Crear **base para evolución** hacia niveles avanzados.  
 - Validar **compatibilidad** con **autenticación basada en JWT** o **sesiones tradicionales**.
+
+---
+
+## 🔗 Alineación con estándares de verificación OWASP (Conceptual)
+
+Este nivel introduce entropía dual — encabezado aleatorio y token dinámico — incrementando la resistencia ante correlación y replay.
+
+| Estándar | Capítulo | Relación |
+|---|---|---|
+| **ASVS** | V7 — Session Management | La variabilidad del token por ciclo complementa los controles de rotación y continuidad de sesión |
+| **ASVS** | V12 — Secure Communication | La entropía dual rompe la correlación estática del canal, añadiendo variabilidad sobre el transporte seguro existente |
+| **ASVS** | V4 — API and Web Service | La aleatoriedad en el canal dificulta la correlación y automatización de patrones de consumo de la API |
+
+> ⚠️ **Nota de alcance:** Esta alineación es conceptual y no implica cobertura formal por parte de los controles existentes en estos estándares.
+
+> 📄 Análisis detallado: [`/docs/adoption/ecosystem-alignment.md`](../../docs/adoption/ecosystem-alignment.md)
 
 ---
 

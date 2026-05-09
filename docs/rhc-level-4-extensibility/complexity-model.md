@@ -149,21 +149,7 @@ El sistema alterna entre ambos modos aleatoriamente — el atacante no sabe de a
 C(n, k) = n! / (k! × (n-k)!)
 ```
 
-#### ¿Qué significa el símbolo `!`?
-
-El signo `!` se llama **factorial**. Significa multiplicar ese número por todos los enteros anteriores hasta llegar a 1:
-
-```
-1! = 1
-2! = 2 × 1 = 2
-3! = 3 × 2 × 1 = 6
-4! = 4 × 3 × 2 × 1 = 24
-5! = 5 × 4 × 3 × 2 × 1 = 120
-6! = 6 × 5 × 4 × 3 × 2 × 1 = 720
-7! = 7 × 6 × 5 × 4 × 3 × 2 × 1 = 5040
-```
-
-Con eso en mente, los cálculos se pueden seguir paso a paso:
+> Para entender el símbolo `!` (factorial), consultar [`docs/adoption/terminology.md`](../adoption/terminology.md).
 
 **C(7, 1):** de 7 headers, elige 1
 ```
@@ -343,9 +329,20 @@ Las capas futuras pueden incluir:
 - Headers con TTL individual (token expira antes que el ciclo)
 - Rotación de la Lista V basada en comportamiento previo del cliente
 - Integración con funciones adaptativas externas (señal de carga, hora, geolocalización)
+- Selección condicionada por número de peticiones acumuladas en la sesión
+- Selección basada en nivel de criticidad del endpoint
+- Rotación influenciada por evento específico del sistema (login, acción crítica, refresh)
 - Composición de dos instancias RHC en paralelo para endpoints críticos
 
+> La potencia del protocolo no reside en ninguna capa aislada,  
+> sino en la composición progresiva de todas ellas.  
+> Cada institución construye su propio canal — y ese canal  
+> no necesita documentarse públicamente para ser válido.  
+
 > El límite de Ω no es tecnológico — es el ingenio del diseñador del sistema.
+
+> El marco legal que respalda la privacidad de cada implementación está definido en
+> [`LICENSE_ALIGNMENT.md`](../../LICENSE_ALIGNMENT.md) — sección 5.
 
 ---
 

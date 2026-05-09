@@ -34,6 +34,8 @@ Para información detallada sobre versiones, fechas, estado del proyecto y metad
 > No compite con tokens sincronizadores, cookies SameSite, ni OAuth.
 >
 > RHC opera en una capa diferente: **la integridad del canal de comunicación**.
+> En contextos como WebSockets o pipelines multi-agente, RHC verifica
+> la continuidad del flujo — no la validez de un token individual.
 >
 > Si llegas esperando una solución de capa de aplicación para CSRF clásico, este no es ese proyecto.
 > Si te interesa proteger el *comportamiento del flujo* en sistemas distribuidos, automatizados o con agentes de IA — sigue leyendo.
@@ -122,12 +124,14 @@ FCHA no roba. No intercepta. **Suplanta el comportamiento.**
 - Flujos de trabajo entre servicios de terceros
 - Automatizaciones sin supervisión humana directa
 
-> FCHA no existe como categoría en OWASP Top 10 ni en CAPEC actualmente.  
+> FCHA no existe como categoría en OWASP Top 10 ni en CAPEC actualmente (a la fecha de esta publicación).
 > Este proyecto propone su definición y documentación formal.
 
 ---
 
-### 🔎 Caso real observado — Claude Mythos Preview (Anthropic, Abril 2026)
+### 🔎 Casos observados en entornos reales
+
+#### Claude Mythos Preview — Anthropic (Abril 2026)
 
 En abril de 2026, Anthropic documentó que su modelo **Claude Mythos Preview** escapó de un entorno sandbox durante pruebas de seguridad internas.
 
@@ -143,10 +147,15 @@ Este comportamiento es FCHA en entorno real:
 | Validaciones tradicionales no detectaron la anomalía | ✔️ El sistema no bloqueó el movimiento |
 | El sistema fue convencido, no comprometido | ✔️ Anthropic confirmó que las validaciones parecían correctas |
 
-> *"La publicación original de paradigm-shift.md en Medium data del 16 de enero de 2026 — tres meses antes del evento Mythos — y está registrada públicamente en LinkedIn bajo la misma fecha."*
+> *La conceptualización inicial del modelo (FCHA / CIL) fue publicada en el artículo original de Medium asociado a `paradigm-shift.md` el 16 de enero de 2026 — tres meses antes del evento Mythos — y registrada públicamente en LinkedIn bajo la misma fecha.*
 
-> **Fuentes:** Anthropic System Card (Abril 7, 2026) · UK AISI · Scientific American (Abril 2026)
-> Ver: [`docs/references.md`](docs/references.md)
+> **Referencias completas:**  
+> Incluye fuentes del caso (Anthropic System Card · UK AISI · Scientific American)  
+> y análisis posterior del autor — *"El sistema no fue comprometido. Fue convencido."*  
+> Ver en: [`docs/references.md`](docs/references.md)
+
+📊 **Análisis estructurado del caso:**
+> Ver [`docs/evidence-mapping.md`](docs/evidence-mapping.md)
 
 ---
 
@@ -206,17 +215,18 @@ La propuesta de valor de RHC no es *"el atacante no sabe el nombre del header"* 
 ## 🧩 Posición en la arquitectura de seguridad
 
 ```
-┌─────────────────────────────────────────────────────┐
-│               Capa de Aplicación                    │
-│   Tokens CSRF · SameSite Cookies · Autorización     │
-├─────────────────────────────────────────────────────┤
-│           ◄ RHC opera aquí ►                        │
-│        Capa de Integridad del Canal (CIL)           │
-│   Entropía dinámica · Dispersión · No-replicabilidad│
-├─────────────────────────────────────────────────────┤
-│               Capa de Transporte                    │
-│             TLS · HTTPS · OAuth                     │
-└─────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────┐
+│               Capa de Aplicación                     │
+│   Tokens CSRF · SameSite Cookies · OAuth · JWT       │  ← valida identidad y acción
+├──────────────────────────────────────────────────────┤
+│               ◄ RHC opera aquí ►                     │
+│          Capa de Integridad del Canal (CIL)          │  ← valida coherencia del flujo
+│  Entropía dinámica · Dispersión · No-replicabilidad  │
+├──────────────────────────────────────────────────────┤
+│               Capa de Transporte                     │
+│                      TLS                             │
+│             HTTPS  (HTTP sobre TLS)                  │  ← cifra el canal
+└──────────────────────────────────────────────────────┘
 ```
 
 RHC introduce una **Communication Integrity Layer (CIL)** —  
@@ -394,6 +404,8 @@ RHC es especialmente relevante en contextos donde la validación de identidad so
 
 ### Conceptual
 - [🧠 Cambio de Paradigma — Por qué los endpoints ya no son suficientes](docs/paradigm-shift.md)
+- [🖼️ Escenarios del Cambio de Paradigma](docs/paradigm-shift-scenarios.md)
+  ↳ Escenarios arquitectónicos ilustrativos sobre integridad dinámica del canal
 - [🧭 Marco Conceptual del Protocolo RHC](docs/conceptual/marco_conceptual_rhc.md)
 
 ### Técnica
@@ -405,9 +417,18 @@ RHC es especialmente relevante en contextos donde la validación de identidad so
 
 ### Para revisores
 - [📋 Guía para Revisores OWASP](docs/adoption/reviewer-guide.md)
-- [🌐 Alineación con el Ecosistema de Seguridad](docs/adoption/ecosystem-alignment.md)
+- [🌐 Alineación con el Ecosistema de Seguridad](docs/adoption/ecosystem-alignment.md)  
+  ↳ Incluye cross-referencia con:  
+    - **OWASP ASVS** → Application Security Verification Standard
+    - **OWASP MASVS** → Mobile Application Security Verification Standard
+    - **OWASP AIVSS** → AI Security Verification Standard
+- [🧩 Cross-Standard Gap Analysis (CIL)](docs/cross-standard-gap-analysis.md)  
+  ↳ **Análisis transversal de la brecha estructural** compartida entre ASVS, MASVS y AIVSS respecto a la continuidad del flujo de comunicación
 - [📖 Terminología](docs/adoption/terminology.md)
 - [⚠️ Alcance y Limitaciones](docs/scope-and-limitations.md)
+- [🔐 Propiedades de Seguridad](docs/security-properties.md)  
+  ↳ Propiedades garantizadas, derivadas y suposiciones del protocolo
+- [❓ FCHA — Preguntas Frecuentes y Aclaraciones Técnicas](docs/fcha-faq.md)
 
 ### Publicaciones externas
 - [Medium — Advanced CSRF Mitigation Strategy: Randomized Header Channel](https://medium.com/@fernandofa0306/advanced-csrf-mitigation-strategy-randomized-header-channel-using-pattern-dispersion-20d54b1d4c6e)
@@ -485,6 +506,3 @@ El objetivo es construir en comunidad, no defender una idea cerrada.
 **© 2025 Fernando Flores Alvarado — Todos los derechos reservados bajo las licencias indicadas.**  
 
 > *“Compartir con responsabilidad es inspirar para construir el futuro.”*
-
-
-

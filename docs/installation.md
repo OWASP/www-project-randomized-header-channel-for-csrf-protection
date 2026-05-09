@@ -11,12 +11,6 @@ Información detallada sobre versiones, fechas, estado y metadatos completos, co
 
 ---
 
-**Autor:** Fernando Flores Alvarado  
-**Licencia:** Apache 2.0 (código) + CC BY 4.0 (documentación)  
-**Versión:** 1.0.0
-
----
-
 ## Requisitos previos
 
 Antes de ejecutar cualquier nivel del PoC, asegúrate de tener instalado:

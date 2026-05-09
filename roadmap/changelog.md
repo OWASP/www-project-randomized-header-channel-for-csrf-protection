@@ -71,7 +71,9 @@ modelo de dispersión aleatoria y entropía controlada (*Controlled Chaos*).
 - `docs/architecture.md` — Arquitectura del sistema y modelo de entropía.
 - `docs/overview.md` — Vista general y orden de lectura recomendado.
 - `docs/paradigm-shift.md` — Cambio de paradigma en seguridad de comunicaciones.
+- `docs/paradigm-shift-scenarios.md` — Escenarios arquitectónicos ilustrativos sobre integridad dinámica del canal.
 - `docs/scope-and-limitations.md` — Alcance técnico y limitaciones explícitas del protocolo.
+- `docs/security-properties.md` — Propiedades de seguridad garantizadas, derivadas y suposiciones del protocolo.
 - `docs/builder.md` y `docs/breaker.md` — Guías de construcción y análisis de ruptura.
 - `docs/installation.md` — Guía de instalación local completa para los 4 niveles.
 - `docs/rhc-ns-01_naming_standard.md` — Estándar de nombres RHC-NS-01.
@@ -91,6 +93,12 @@ modelo de dispersión aleatoria y entropía controlada (*Controlled Chaos*).
 - `docs/adoption/integration.md` — Alineación con frameworks de seguridad existentes.
 - `docs/adoption/ecosystem-alignment.md` — Posición del protocolo en el ecosistema de seguridad.
 - `docs/adoption/reviewer-guide.md` — Guía específica para revisores OWASP.
+- `docs/adoption/alignment-asvs.md` — Alineación detallada con OWASP ASVS.
+- `docs/adoption/alignment-masvs.md` — Alineación detallada con OWASP MASVS.
+- `docs/adoption/alignment-aivss.md` — Alineación detallada con OWASP AIVSS.
+
+#### ❓ Aclaraciones técnicas y FAQ
+- `docs/fcha-faq.md` — Preguntas frecuentes y aclaraciones técnicas sobre el modelo FCHA: posicionamiento, nivel de madurez, diferenciación con modelos existentes y vías de contribución.
 
 #### 📦 Ejemplos y recursos
 - `docs/examples.md` — Ejemplos HTTP oficiales de los 4 niveles del protocolo.
@@ -101,6 +109,8 @@ modelo de dispersión aleatoria y entropía controlada (*Controlled Chaos*).
 #### 🖼️ Assets
 - `assets/images/avance-rhc-channel-entropy-metrics-viewer.png` — Captura del visor de entropía.
 - `assets/images/README.md` y `assets/README.md` — Documentación de recursos visuales.
+- `assets/images/paradigm-shift-scenario-modern-automation-rhc-comparison.png`
+- `assets/images/paradigm-shift-scenario-client-server-rhc-comparison.png`
 
 #### 📰 Publicaciones
 - Artículos publicados en Medium: ver `publications/medium/article_links.md`.
@@ -113,6 +123,25 @@ modelo de dispersión aleatoria y entropía controlada (*Controlled Chaos*).
 - Contacto establecido con OWASP Secure Headers Project (Dominique Righetto).
 - Contacto establecido con OWASP Agentic AI Top 10 (Steve Wilson).
 - Coordinación con OWASP Mexico City Chapter.
+
+#### 🔎 Validación empírica del modelo FCHA (post-publicación del modelo)
+- Documentación del caso Claude Mythos Preview (Anthropic, Abril 2026) como evento observable alineado con el modelo FCHA.
+- Integración del caso en:
+  - `README.md` (resumen narrativo)
+  - `docs/paradigm-shift.md` (análisis conceptual)
+  - `docs/references.md` (fuentes externas + análisis del autor)
+- Formalización de la sección:
+  “Evidencia empírica — Validación externa del modelo FCHA”.
+- Creación de `docs/evidence-mapping.md`:
+  documento de correlación formal entre evidencia empírica,
+  modelo FCHA y respuesta RHC.
+
+#### 🧩 Formalización transversal de CIL
+- Creación de `docs/cross-standard-gap-analysis.md`:
+  análisis estructural comparativo entre OWASP ASVS, MASVS y AIVSS,
+  identificando la ausencia de validación de continuidad del flujo
+  y formalizando la capa CIL (Communication Integrity Layer)
+  como dimensión transversal complementaria.
 
 ### Descripción:
 Esta versión consolida el protocolo como un proyecto de investigación documentado, funcional y alineado con estándares OWASP. El repositorio pasa de estructura inicial a proyecto listo para revisión técnica oficial.

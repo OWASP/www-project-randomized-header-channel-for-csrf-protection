@@ -109,7 +109,22 @@ level_1_basic/
 
 ---
 
-### 📌 Referencias
+## 🔗 Alineación con estándares de verificación OWASP (Conceptual)
+
+Este nivel introduce la dispersión aleatoria de encabezados como primera capa de variabilidad en el canal de comunicación.
+
+| Estándar | Capítulo | Relación |
+|---|---|---|
+| **ASVS** | V7 — Session Management | La dispersión aleatoria del token entre encabezados complementa los controles de sesión al introducir variabilidad en el canal |
+| **ASVS** | V12 — Secure Communication | RHC opera sobre el canal de comunicación existente añadiendo entropía inicial al flujo |
+
+> ⚠️ **Nota de alcance:** Esta alineación es conceptual y no implica cobertura formal por parte de los controles existentes en estos estándares.
+
+> 📄 Análisis detallado: [`/docs/adoption/ecosystem-alignment.md`](../../docs/adoption/ecosystem-alignment.md)
+
+---
+
+## 📌 Referencias
 
 - Instalación y ejecución: [`/docs/installation.md`](../../docs/installation.md)
 - Nota sobre prefijo `X-`: [`NOTA-X-HEADERS.md`](../NOTA-X-HEADERS.md)

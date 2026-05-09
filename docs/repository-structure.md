@@ -35,11 +35,17 @@ www-project-randomized-header-channel-for-csrf-protection/
 ├── 📘 docs/                             → Documentación técnica, conceptual y referencias.
 │   │
 │   ├── adoption/                        → Guías de adopción, integración y alineación
-│   │   ├── ecosystem-alignment.md       → Alineación con estándares y marcos de seguridad
-│   │   ├── integration.md               → Enfoque de integración en sistemas existentes
-│   │   ├── reviewer-guide.md            → Guía para evaluadores del proyecto
-│   │   ├── threat-model.md              → Modelo de amenazas y superficie de ataque
-│   │   └── terminology.md               → Definiciones y conceptos clave
+│   │   ├── alignment-aivss.md              → Alineación con el estándar de verificación OWASP AIVSS
+│   │   |                                     (AI Security Verification Standard)
+│   │   ├── alignment-asvs.md               → Alineación con el estándar de verificación OWASP ASVS
+│   │   |                                     (Application Security Verification Standard)
+│   │   ├── alignment-masvs.md              → Alineación con el estándar de verificación OWASP MASVS
+│   │   |                                     (Mobile Application Security Verification Standard)
+│   │   ├── ecosystem-alignment.md          → Alineación con estándares y marcos de seguridad
+│   │   ├── integration.md                  → Enfoque de integración en sistemas existentes
+│   │   ├── reviewer-guide.md               → Guía para evaluadores del proyecto
+│   │   ├── threat-model.md                 → Modelo de amenazas y superficie de ataque
+│   │   └── terminology.md                  → Definiciones y conceptos clave
 │   │
 │   ├── conceptual/                      → Documentación conceptual profunda
 │   │   └── marco_conceptual_rhc.md
@@ -47,8 +53,10 @@ www-project-randomized-header-channel-for-csrf-protection/
 │   ├── rhc-level-4-extensibility/       → Documentación extendida del Nivel 4
 │   │   ├── attack-scenarios.md             → Comportamiento del canal ante ataques (Cómo responde el canal)
 │   │   ├── attack-scenarios-intuition.md   → Explicación intuitiva de escenarios
-│   │   ├── complexity-model.md             → Modelo de complejidad del canal: crecimiento progresivo y no lineal del espacio de búsqueda del atacante (Ω)
-│   │                                         Extensibilidad del Nivel 4: diseño abierto del canal y evolución dinámica de su complejidad
+│   │   ├── complexity-model.md             → Modelo de complejidad del canal: crecimiento progresivo y no
+│   │   |                                     lineal del espacio de búsqueda del atacante (Ω). Extensibilidad
+│   │   |                                     del Nivel 4: diseño abierto del canal y evolución dinámica de
+│   │   |                                     su complejidad
 │   │   ├── extensibility.md                → Arquitectura extensible y restricciones de diseño
 │   │   ├── formal-model.md                 → Formalización matemática del canal
 │   │   └── formal-model-overview.md        → Versión intuitiva del modelo (lectura accesible)
@@ -56,51 +64,63 @@ www-project-randomized-header-channel-for-csrf-protection/
 │   ├── architecture.md                  → Arquitectura del sistema RHC
 │   ├── breaker.md                       → Análisis de ruptura / testing de seguridad
 │   ├── builder.md                       → Construcción e implementación del protocolo
-│   ├── entropy-analyzer-roadmap.md      → Roadmap del Analizador de entropía RHC: Fases progresivas del análisis del canal, su comportamiento dinámico y métricas RHC.
+│   ├── cross-standard-gap-analysis.md   → Análisis transversal de brechas estructurales en estándares
+│   │                                      de verificación de seguridad y definición conceptual de
+│   │                                      CIL (Communication Integrity Layer)
+│   ├── entropy-analyzer-roadmap.md      → Roadmap del Analizador de entropía RHC: Fases progresivas del
+│   │                                      análisis del canal, su comportamiento dinámico y métricas RHC.
+│   ├── evidence-mapping.md              → Mapeo formal entre evidencia empírica, 
+│   │                                      propiedades FCHA y mecanismos de mitigación RHC
 │   ├── examples.md                      → Ejemplos HTTP oficiales de los 4 niveles del protocolo
+│   ├── fcha-faq.md                      → Preguntas frecuentes y aclaraciones técnicas sobre
+│   │                                      el modelo FCHA (Flow Channel Hijacking Attack)
 │   ├── installation.md                  → Guía de instalación
 │   ├── methodology.md                   → Fundamentos físico-matemáticos del protocolo
 │   ├── overview.md                      → Vista general del protocolo
 │   ├── paradigm-shift.md                → Cambio de paradigma en seguridad
+│   ├── paradigm-shift-scenarios.md      → Escenarios arquitectónicos ilustrativos sobre integridad
+│   │                                      dinámica del canal
 │   ├── references.md                    → Fuentes teóricas y artículos citados
 │   ├── repository-structure.md          → Este documento 
 │   ├── rhc-ns-01_naming_standard.md     → Estándar de nombres RHC-NS-01
-│   └── scope-and-limitations.md         → Alcance técnico y limitaciones conocidas
+│   ├── scope-and-limitations.md         → Alcance técnico y limitaciones conocidas
+│   └── security-properties.md           → Propiedades de seguridad garantizadas, derivadas y suposiciones
+│                                          del protocolo
 │
 ├── 🧪 PoC/                              → Implementaciones demostrativas del protocolo
-│   ├── level_1_basic/                   → Nivel básico: tres headers y un token
-│   ├── level_2_intermediate/            → Nivel intermedio: headers aleatorios y tres tokens
-│   ├── level_3_advanced/                → Nivel avanzado: entropía variable por longitud
-│   ├── level_4_dynamic_adaptive/        → Nivel dinámico-adaptativo: dispersión y decoys
-│   └── README.md                        → Índice y descripción general de los niveles
+│   ├── level_1_basic/                       → Nivel básico: tres headers y un token
+│   ├── level_2_intermediate/                → Nivel intermedio: headers aleatorios y tres tokens
+│   ├── level_3_advanced/                    → Nivel avanzado: entropía variable por longitud
+│   ├── level_4_dynamic_adaptive/            → Nivel dinámico-adaptativo: dispersión y decoys
+│   └── README.md                            → Índice y descripción general de los niveles
 │
 ├── 🧰 resources/                       → Implementaciones de seguridad listas para producción alineadas con OWASP
-│   ├── security-headers/                → Implementación productiva de encabezados HTTP basada en OWASP Secure Headers
-│   │   ├── wa_config2_encabezados.php   → Implementación en español
-│   │   ├── wa_config2_headers.php       → Implementación en inglés
-│   │   └── README.md                    → Documentación del recurso
-│   └── README.md                        → Índice y descripción de recursos reutilizables
+│   ├── security-headers/                   → Implementación productiva de encabezados HTTP basada en OWASP Secure Headers
+│   │   ├── wa_config2_encabezados.php         → Implementación en español
+│   │   ├── wa_config2_headers.php             → Implementación en inglés
+│   │   └── README.md                          → Documentación del recurso
+│   └── README.md                           → Índice y descripción de recursos reutilizables
 │
 ├── 🌐 publications/                     → Publicaciones externas y borradores
 │   ├── medium/
-│   │   └── article_links.md             → Enlaces a publicaciones en Medium
+│   │   └── article_links.md                → Enlaces a publicaciones en Medium
 │   ├── devto/
-│   │   └── drafts/                      → Notas o borradores para artículos en Dev.to.
-│   │       └── README.md                → Índice y resumen de los borradores.
+│   │   └── drafts/                         → Notas o borradores para artículos en Dev.to.
+│   │       └── README.md                   → Índice y resumen de los borradores.
 │   └── arxiv/
-│       └── README.md                    → Resumen de papers y enlaces a versiones en línea.
+│       └── README.md                       → Resumen de papers y enlaces a versiones en línea.
 │
 ├── 🧭 roadmap/                         → Plan de desarrollo y registro histórico.
-│   ├── roadmap_2025.md                  → Objetivos y metas previstas para 2025.
-│   └── changelog.md                     → Registro de cambios.
+│   ├── roadmap_2025.md                    → Objetivos y metas previstas para 2025.
+│   └── changelog.md                       → Registro de cambios.
 │
-├── 📄 NOTICE                            → Atribución de autoría y origen del proyecto.
-├── 📄 NOTICE.md                         → Versión extendida para GitHub.
-├── ⚖️ LICENSE                           → Apache License 2.0 (código fuente).
-├── ⚖️ LICENSE.md                        → Formato Markdown para GitHub.
-├── 🧾 LICENSE_CC                        → Creative Commons BY 4.0 (documentación).
-├── 🧾 LICENSE_CC.md                     → Versión Markdown para lectura en GitHub.
-├── LICENSE_ALIGNMENT.md                 → Compatibilidad de licencias (Apache 2.0 + CC BY 4.0).
+├── 📄 NOTICE                           → Atribución de autoría y origen del proyecto.
+├── 📄 NOTICE.md                        → Versión extendida para GitHub.
+├── ⚖️ LICENSE                          → Apache License 2.0 (código fuente).
+├── ⚖️ LICENSE.md                       → Formato Markdown para GitHub.
+├── 🧾 LICENSE_CC                       → Creative Commons BY 4.0 (documentación).
+├── 🧾 LICENSE_CC.md                    → Versión Markdown para lectura en GitHub.
+├── ⚖️ LICENSE_ALIGNMENT.md             → Compatibilidad de licencias (Apache 2.0 + CC BY 4.0).
 ├── 🧩 VERSION                          → Datos técnicos de versión actual.
 ├── 🧩 VERSION.md                       → Versión Markdown con metadatos adicionales.
 └── ⚙️ .gitignore                       → Exclusión de archivos locales o temporales.

@@ -124,6 +124,22 @@ level_3_advanced/
 
 ---
 
+## 🔗 Alineación con estándares de verificación OWASP (Conceptual)
+
+Este nivel introduce entropía variable en longitud y codificación, eliminando correlaciones estáticas y elevando el costo de análisis del canal.
+
+| Estándar | Capítulo | Relación |
+|---|---|---|
+| **ASVS** | V4 — API and Web Service | La variabilidad estructural del token por ciclo dificulta la correlación y automatización del consumo de la API |
+| **ASVS** | V12 — Secure Communication | La entropía variable en longitud y codificación refuerza la no repetibilidad del canal sobre el transporte seguro existente |
+| **MASVS** | MASVS-RESILIENCE-4 | Los patrones dinámicos del canal incrementan el costo de análisis de tráfico externo, complementando las técnicas de protección en tiempo de ejecución |
+
+> ⚠️ **Nota de alcance:** Esta alineación es conceptual y no implica cobertura formal por parte de los controles existentes en estos estándares.
+
+> 📄 Análisis detallado: [`/docs/adoption/ecosystem-alignment.md`](../../docs/adoption/ecosystem-alignment.md)
+
+---
+
 ## 📌 Referencias
 
 - Instalación y ejecución: [`/docs/installation.md`](../../docs/installation.md)

@@ -291,6 +291,18 @@ No asegura identidades.
 
 ---
 
+## Escenarios arquitectónicos ilustrativos
+
+Para visualizar cómo cambia el modelo de confianza al introducir integridad dinámica del canal, se incluyen escenarios arquitectónicos complementarios basados en automatización moderna, microservicios distribuidos y flujos asistidos por IA.
+
+Ver:
+
+- [`paradigm-shift-scenarios.md`](./paradigm-shift-scenarios.md)
+
+Estos escenarios son ilustrativos y están enfocados en el comportamiento observable del flujo de comunicación, no en implementaciones específicas.
+
+---
+
 ## Conclusión
 
 Las arquitecturas modernas han introducido una nueva superficie de ataque: la comunicación continua entre procesos automatizados y agentes inteligentes.
@@ -309,10 +321,11 @@ Extiende la seguridad hacia un plano que permanece implícito y mayormente no co
 Este documento analiza una debilidad emergente en arquitecturas clásicas, modernas, automatizadas y asistidas por IA: la suplantación de flujos legítimos mediante la imitación de patrones de comunicación. Define el Flow Channel Hijacking Attack (FCHA) e introduce RHC como una capa complementaria para preservar la integridad del canal sin alterar los mecanismos de seguridad existentes.
 
 ---
+## Validación externa del modelo — Evidencia empírica
 
-## Validación externa del modelo — Caso observado en entorno real
+### Casos observados en entornos reales
 
-### Claude Mythos Preview — Anthropic (Abril 2026)
+#### Claude Mythos Preview — Anthropic (Abril 2026)
 
 En abril de 2026, Anthropic documentó públicamente que su modelo Claude Mythos Preview escapó de un entorno sandbox durante pruebas de seguridad internas, moviéndose a través de flujos de comunicación que el sistema consideraba legítimos — sin comprometer credenciales, sin vulnerar endpoints, sin romper cifrado.
 
@@ -338,7 +351,20 @@ El problema no estaba en la identidad. Estaba en que el canal confió ciegamente
 > - UK AI Security Institute (AISI) — Evaluación independiente de capacidades de Mythos Preview
 > - Scientific American — *"What is Mythos and why are experts worried about Anthropic's AI model"* (Abril 2026)
 > 
-> Ver: [`docs/references.md`](docs/references.md)
+> Ver: [`references.md`](./references.md)
+
+**Análisis posterior del caso:**
+- https://medium.com/@fernandofa0306/el-sistema-no-fue-comprometido-fue-convencido-e45ea019adb6
+
+---
+
+📊 Correspondencia estructurada del modelo:
+
+Ver:
+[`evidence-mapping.md`](./evidence-mapping.md)
+
+Este documento presenta la relación formal entre:
+evento observado → propiedad FCHA → respuesta RHC.
 
 ---
 

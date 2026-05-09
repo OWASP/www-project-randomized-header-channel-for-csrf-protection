@@ -12,7 +12,7 @@
 **Estado:** Incubadora OWASP  — Estructura inicial del repositorio y documentación estructurada
 **Fecha de Inicio:** 16 Noviembre 2025  
 
-**Última actualización:** Abril 2026  
+**Última actualización:** Mayo 2026  
 **Version:** 1.1.0  
 **Codename:** *Origin Entropy*  
 **Licencia:** Apache 2.0 (código) + CC BY 4.0 (documentación)  

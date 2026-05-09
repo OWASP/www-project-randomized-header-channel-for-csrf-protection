@@ -22,6 +22,11 @@ Cada nivel demuestra cómo la técnica **Controlled Chaos** evoluciona gradualme
 
 ---
 
+> ⚠️Estos PoC deben interpretarse como implementaciones demostrativas.
+> La adopción en entornos reales debe considerar su integración con estándares como OWASP, NIST y modelos de riesgo existentes.
+
+---
+
 ## 🧩 Objetivo general de los PoC
 
 Los PoC (Proof of Concept) tienen tres objetivos principales:
@@ -90,6 +95,22 @@ Todos los archivos fuente de los **Proof of Concept (PoC)** utilizan el formato 
 
 Este formato permite documentar archivos completos, funciones, clases y constantes de forma estructurada y legible, siendo reconocido por los principales entornos de desarrollo (VS Code, PhpStorm, NetBeans) y por herramientas automáticas de generación de documentación, como **phpDocumentor** o **Doxygen**.  
 Admite etiquetas especializadas como `@author`, `@version`, `@param`, `@return`, `@see`, entre otras, lo que facilita la comprensión, trazabilidad y mantenimiento del código a nivel profesional.
+
+---
+
+## 🔗 Alineación con estándares de verificación OWASP (Conceptual)
+
+RHC y el modelo FCHA pueden alinearse conceptualmente con los estándares de verificación OWASP al introducir la **integridad del flujo de comunicación** como una capa de seguridad complementaria.
+
+| Estándar | Relación con los PoC |
+|---|---|
+| **ASVS** | Extiende las consideraciones de gestión de sesiones, seguridad en comunicaciones y arquitectura segura, abordando la continuidad del flujo como capa adicional |
+| **MASVS** | Identifica el riesgo de patrones de comunicación predecibles en interacciones móvil–backend, especialmente relevante en los niveles con mayor entropía |
+| **AIVSS** | Introduce consideraciones de integridad del canal en sistemas asistidos por IA y arquitecturas multi-agente, donde ocurre comunicación autónoma en múltiples pasos |
+
+> ⚠️ **Nota de alcance:** Esta alineación es conceptual y no implica cobertura formal por parte de los controles existentes en estos estándares. Posiciona RHC como una capa complementaria dentro de los marcos de verificación existentes.
+
+> 📄 Análisis detallado por estándar: [`/docs/adoption/ecosystem-alignment.md`](../docs/adoption/ecosystem-alignment.md)
 
 ---
 

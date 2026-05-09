@@ -306,6 +306,30 @@ El **Entropy Lab** (`public_html/entropy/`) corresponde a la **Fase 1** del Anal
 
 ---
 
+## 🔗 Alineación con estándares de verificación OWASP (Conceptual)
+
+Este nivel implementa la Capa de Integridad de la Comunicación (CIL) en su forma más completa — canal no-determinista, adaptativo y con verificación contextual del flujo.
+
+| Estándar | Capítulo | Relación |
+|---|---|---|
+| **ASVS** | V4 — API and Web Service | El canal adaptativo con decoys hace inviable la correlación y automatización del consumo de la API |
+| **ASVS** | V12 — Secure Communication | La rotación dinámica y el filtrado contextual garantizan la no repetibilidad del canal sobre el transporte seguro existente |
+| **ASVS** | V15 — Secure Coding and Architecture | La CIL se introduce como capa arquitectónica explícita, haciendo visible la verificación de continuidad del canal como decisión de diseño |
+| **MASVS** | MASVS-NETWORK-1 | La entropía multifactor complementa las prácticas seguras de transporte en comunicaciones móvil–backend |
+| **MASVS** | MASVS-NETWORK-2 | La variabilidad del canal añade verificación de continuidad del flujo sobre la conexión autenticada por pinning |
+| **MASVS** | MASVS-AUTH-1 | El canal adaptativo reduce la viabilidad de reutilización de flujos de autenticación válidos |
+| **MASVS** | MASVS-RESILIENCE-4 | Los patrones dinámicos y los decoys elevan significativamente el costo de análisis de tráfico externo |
+| **AIVSS** | C09 — Autonomous Orchestration | La CIL introduce verificación de continuidad del canal en flujos multi-agente, complementando los controles de identidad y autorización |
+| **AIVSS** | C11 — Adversarial Robustness | La variabilidad y los decoys incrementan el costo de replicación del canal como vector de ataque |
+| **AIVSS** | C13 — Monitoring & Anomaly Detection | El Analizador de Entropía RHC (Fase 1 incluida en este nivel) complementa la detección de anomalías evaluando el canal como secuencia de flujo |
+| **AIVSS** | C14 — Human Oversight and Trust | La fricción técnica del canal adaptativo reduce la viabilidad de flujos no legítimos que puedan desencadenar acciones de alto riesgo |
+
+> ⚠️ **Nota de alcance:** Esta alineación es conceptual y no implica cobertura formal por parte de los controles existentes en estos estándares.
+
+> 📄 Análisis detallado: [`/docs/adoption/ecosystem-alignment.md`](../../docs/adoption/ecosystem-alignment.md)
+
+---
+
 # 🏁 Conclusión
 
 El Nivel 4 es el primer punto donde el RHC deja de ser:
