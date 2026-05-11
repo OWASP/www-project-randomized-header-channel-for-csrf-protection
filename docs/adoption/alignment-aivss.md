@@ -20,6 +20,8 @@ Este archivo desarrolla en detalle la alineación entre el protocolo **RHC (Rand
 
 > ⚠️ **Nota sobre el estado del estándar:** AIVSS v1.0 se encuentra en desarrollo activo (estado Incubator). Su estructura es similar a ASVS: cada capítulo (`C07`, `C09`, etc.) contiene secciones con requisitos individuales numerados (`C7.3.4`, `C9.5.1`, etc.) y niveles de verificación (L1/L2/L3). Los req_id presentados en este documento corresponden al repositorio oficial en su estado actual y **pueden evolucionar** conforme el estándar avance hacia una versión estable.  
 
+> La referencia cruzada con ASVS fue sugerida por **Colin Watson (OWASP)** durante la revisión del trabajo relacionado con FCHA, con el objetivo de facilitar la comprensión del lugar que ocupa RHC dentro del ecosistema de verificación de seguridad.  
+
 > ℹ️ **Nota de terminos:** En este documento se utiliza el término *covert channel* para referirse a mecanismos de comunicación que operan dentro de canales aparentemente legítimos. En el contexto de FCHA, este concepto se interpreta como patrones de comunicación replicados entre agentes dentro de flujos válidos.
 
 ### Capítulos analizados  

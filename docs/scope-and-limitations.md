@@ -1,3 +1,4 @@
+C:\laragon\www\RHC-Protocol-Core\docs\scope-and-limitations.md:
 > ℹ️ **Note:** This document is written in Spanish. You can use your browser to translate it into English.
 > The Spanish version is preserved intentionally as part of the project's authorship and intellectual identity.
 
@@ -8,6 +9,12 @@
 **Proyecto OWASP:** Randomized Header Channel for CSRF Protection (RHC)  
 **Licencia:** CC BY 4.0 (documentación)  
 Información detallada sobre versiones, fechas, estado y metadatos completos, consulta [`VERSION.md`](../VERSION.md).  
+
+> ℹ️ Este documento fue creado a partir de la retroalimentación técnica recibida durante el proceso formal de revisión del proyecto, coordinado por Starr Brown (OWASP). Las observaciones del revisor contribuyeron directamente a delimitar el alcance, las incompatibilidades conocidas y las limitaciones de despliegue del protocolo.
+
+---
+
+## Sobre este documento
 
 Este documento centraliza la definición formal del alcance de aplicación del protocolo RHC y sus limitaciones técnicas conocidas. Toda referencia a limitaciones en otros documentos del repositorio apunta a este archivo como fuente única de verdad.  
 

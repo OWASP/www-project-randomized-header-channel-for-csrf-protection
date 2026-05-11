@@ -11,6 +11,8 @@ Información detallada sobre versiones, fechas, estado y metadatos completos, co
 
 ---
 
+## Sobre este documento
+
 > Este documento recopila preguntas comunes, objeciones y aclaraciones  
 > sobre el modelo de Flow Channel Hijacking Attack (FCHA) y su relación  
 > con los marcos de seguridad existentes.  

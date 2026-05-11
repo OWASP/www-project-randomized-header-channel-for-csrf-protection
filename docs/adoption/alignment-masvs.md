@@ -20,6 +20,8 @@ Este archivo desarrolla en detalle la alineación entre el protocolo **RHC (Rand
 
 > ⚠️ **Nota sobre la estructura del estándar:** MASVS v2.x utiliza un modelo de controles de un solo nivel, donde cada categoría contiene controles individuales (`MASVS-CATEGORY-N`) como unidad mínima. A diferencia de ASVS, no existen sub-requisitos numerados (por ejemplo, `V7.2.3`). El nivel de detalle presentado en este documento corresponde al **máximo nivel de trazabilidad disponible** en la especificación oficial.  
 
+> La referencia cruzada con ASVS fue sugerida por **Colin Watson (OWASP)** durante la revisión del trabajo relacionado con FCHA, con el objetivo de facilitar la comprensión del lugar que ocupa RHC dentro del ecosistema de verificación de seguridad.  
+
 ### Controles analizados  
 
 | Control | Categoría | Statement oficial |

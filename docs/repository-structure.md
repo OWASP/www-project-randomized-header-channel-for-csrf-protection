@@ -80,6 +80,8 @@ www-project-randomized-header-channel-for-csrf-protection/
 │   ├── paradigm-shift.md                → Cambio de paradigma en seguridad
 │   ├── paradigm-shift-scenarios.md      → Escenarios arquitectónicos ilustrativos sobre integridad
 │   │                                      dinámica del canal
+│   ├── peer-review-and-feedback.md      → Revisiones técnicas externas, observaciones de la comunidad
+│   │                                      y evolución del proyecto a partir del feedback recibido
 │   ├── references.md                    → Fuentes teóricas y artículos citados
 │   ├── repository-structure.md          → Este documento 
 │   ├── rhc-ns-01_naming_standard.md     → Estándar de nombres RHC-NS-01
